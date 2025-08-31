@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Careers | DevSolutions - Professional Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-sr hidden">Portfolio</span>
+        </a>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link active">
+          <span class="lang-en">Careers</span>
+          <span class="lang-sr hidden">Karijere</span>
+        </a>
+        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Partners</span>
+          <span class="lang-sr hidden">Partneri</span>
+        </a>
+        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">International</span>
+          <span class="lang-sr hidden">Međunarodna</span>
+        </a>
+        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Data Protection</span>
+          <span class="lang-sr hidden">Zaštita podataka</span>
+        </a>
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Portfolio</span>
+            <span class="lang-sr hidden">Portfolio</span>
+          </a>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Careers</span>
+            <span class="lang-sr hidden">Karijere</span>
+          </a>
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+          </a>
+          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">International</span>
+            <span class="lang-sr hidden">Međunarodna</span>
+          </a>
+          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Data Protection</span>
+            <span class="lang-sr hidden">Zaštita podataka</span>
+          </a>
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Careers</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Join Our Team</h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+          We're always looking for talented individuals to join our team and help us create amazing software solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            Why Work With Us?
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-rocket text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Innovation First</h4>
+            <p class="text-gray-600">Work with cutting-edge technologies and contribute to innovative projects that make a real impact.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Great Team</h4>
+            <p class="text-gray-600">Join a collaborative team of passionate professionals who support each other's growth.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Career Growth</h4>
+            <p class="text-gray-600">Continuous learning opportunities and clear career progression paths for all team members.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-home text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Work-Life Balance</h4>
+            <p class="text-gray-600">Flexible working arrangements and remote work options to maintain healthy work-life balance.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-gift text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Great Benefits</h4>
+            <p class="text-gray-600">Competitive salary, health insurance, learning budget, and other comprehensive benefits.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-globe text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Global Impact</h4>
+            <p class="text-gray-600">Work on projects that serve clients worldwide and make a difference in various industries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="content-section bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            Open Positions
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            Explore our current job openings and find the perfect role for your skills and career goals.
+          </p>
+        </div>
+        
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Senior Full-Stack Developer</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Full-time</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Remote</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">5+ years</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  We are looking for an experienced Full-Stack Developer to join our team and help build scalable web applications.
+                </p>
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900">Requirements:</h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>5+ years of experience with JavaScript/TypeScript</li>
+                  <li>Experience with React, Angular, or Vue.js</li>
+                  <li>Strong knowledge of Node.js and Express</li>
+                  <li>Experience with SQL and NoSQL databases</li>
+                  <li>Knowledge of cloud platforms (AWS, Azure, GCP)</li>
+                </ul>
+                <a href="contact.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">UX/UI Designer</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Full-time</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Hybrid</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">3+ years</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  We are seeking a talented UX/UI Designer to create exceptional user experiences for our clients' digital products.
+                </p>
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900">Requirements:</h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>3+ years of experience in UX/UI design</li>
+                  <li>Proficiency with Figma, Sketch, or Adobe XD</li>
+                  <li>Strong portfolio demonstrating UI design skills</li>
+                  <li>Experience with user research and testing</li>
+                  <li>Understanding of responsive design principles</li>
+                </ul>
+                <a href="contact.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">DevOps Engineer</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Full-time</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">Remote</span>
+                  <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">4+ years</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  We are looking for a DevOps Engineer to help us build and maintain our cloud infrastructure and CI/CD pipelines.
+                </p>
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900">Requirements:</h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>4+ years of experience in DevOps or SRE roles</li>
+                  <li>Experience with AWS, Azure, or GCP</li>
+                  <li>Strong knowledge of Docker and Kubernetes</li>
+                  <li>Experience with CI/CD tools (Jenkins, GitLab CI, etc.)</li>
+                  <li>Scripting skills in Python, Bash, or PowerShell</li>
+                </ul>
+                <a href="contact.html" class="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                  Apply Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-12 text-center">
+          <p class="text-gray-600 mb-6">Don't see a position that fits? We're always interested in hearing from talented individuals.</p>
+          <a href="contact.html" class="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            Send Us Your Resume
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            Our Hiring Process
+          </h2>
+          <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+            We believe in a transparent and fair hiring process that helps us find the right fit for both candidates and our team.
+          </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+            <h4 class="text-xl font-semibold mb-2">Application</h4>
+            <p class="text-gray-600">Submit your resume and cover letter through our application form or email.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+            <h4 class="text-xl font-semibold mb-2">Screening</h4>
+            <p class="text-gray-600">Initial phone or video call to discuss your background and the role.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+            <h4 class="text-xl font-semibold mb-2">Technical Interview</h4>
+            <p class="text-gray-600">Technical assessment and discussion about your skills and experience.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+            <h4 class="text-xl font-semibold mb-2">Final Interview</h4>
+            <p class="text-gray-600">Meet with the team and discuss culture fit and next steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="index.html" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            Transforming businesses through innovative software solutions since 2023.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-4">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 DevSolutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

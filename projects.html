@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | DevSolutions - Professional Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-sr hidden">Portfolio</span>
+        </a>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Careers</span>
+          <span class="lang-sr hidden">Karijere</span>
+        </a>
+        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Partners</span>
+          <span class="lang-sr hidden">Partneri</span>
+        </a>
+        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">International</span>
+          <span class="lang-sr hidden">Međunarodna</span>
+        </a>
+        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Data Protection</span>
+          <span class="lang-sr hidden">Zaštita podataka</span>
+        </a>
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Portfolio</span>
+            <span class="lang-sr hidden">Portfolio</span>
+          </a>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Careers</span>
+            <span class="lang-sr hidden">Karijere</span>
+          </a>
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+          </a>
+          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">International</span>
+            <span class="lang-sr hidden">Međunarodna</span>
+          </a>
+          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Data Protection</span>
+            <span class="lang-sr hidden">Zaštita podataka</span>
+          </a>
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">
+                <span class="lang-en">Home</span>
+                <span class="lang-sr hidden">Početna</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="services.html" class="hover:text-white">
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item active">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="lang-en">Custom Projects</span>
+          <span class="lang-sr hidden">Prilagođeni projekti</span>
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+          <span class="lang-en">Explore our custom software development projects tailored to meet unique business requirements and challenges.</span>
+          <span class="lang-sr hidden">Istražite naše projekte prilagođenog razvoja softvera dizajnirane da zadovolje jedinstvene poslovne zahteve i izazove.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Project Categories -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            <span class="lang-en">Project Categories</span>
+            <span class="lang-sr hidden">Kategorije projekata</span>
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-building text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">Enterprise Solutions</span>
+              <span class="lang-sr hidden">Poslovna rešenja</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Large-scale enterprise applications designed to handle complex business processes and high-volume operations.</span>
+              <span class="lang-sr hidden">Velika poslovna aplikacije dizajnirana da rukuju složenim poslovnim procesima i operacijama velikog obima.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">ERP Systems</span>
+                <span class="lang-sr hidden">ERP sistemi</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Business Intelligence</span>
+                <span class="lang-sr hidden">Poslovna inteligencija</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Workflow Automation</span>
+                <span class="lang-sr hidden">Automatizacija toka rada</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-mobile-alt text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">Mobile Applications</span>
+              <span class="lang-sr hidden">Mobilne aplikacije</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Native and cross-platform mobile apps for iOS and Android with seamless user experiences.</span>
+              <span class="lang-sr hidden">Nativne i cross-platform mobilne aplikacije za iOS i Android sa besprekorno korisničkim iskustvom.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">iOS Development</span>
+                <span class="lang-sr hidden">iOS razvoj</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Android Development</span>
+                <span class="lang-sr hidden">Android razvoj</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Cross-Platform</span>
+                <span class="lang-sr hidden">Cross-Platform</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-globe text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">Web Platforms</span>
+              <span class="lang-sr hidden">Web platforme</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Modern web applications and platforms built with the latest technologies and frameworks.</span>
+              <span class="lang-sr hidden">Moderne web aplikacije i platforme izgrađene sa najnovijim tehnologijama i okvirima.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Progressive Web Apps</span>
+                <span class="lang-sr hidden">Progresivne web aplikacije</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">SaaS Platforms</span>
+                <span class="lang-sr hidden">SaaS platforme</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">API Development</span>
+                <span class="lang-sr hidden">API razvoj</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-cloud text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">Cloud Solutions</span>
+              <span class="lang-sr hidden">Cloud rešenja</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Scalable cloud-based applications and infrastructure solutions for modern businesses.</span>
+              <span class="lang-sr hidden">Skalabilne cloud aplikacije i infrastrukturna rešenja za moderna preduzeća.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">AWS Solutions</span>
+                <span class="lang-sr hidden">AWS rešenja</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Azure Integration</span>
+                <span class="lang-sr hidden">Azure integracija</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Microservices</span>
+                <span class="lang-sr hidden">Mikroservisi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="800">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-robot text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">AI & Machine Learning</span>
+              <span class="lang-sr hidden">AI i mašinsko učenje</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Intelligent systems powered by artificial intelligence and machine learning algorithms.</span>
+              <span class="lang-sr hidden">Inteligentni sistemi pokretani veštačkom inteligencijom i algoritmima mašinskog učenja.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Predictive Analytics</span>
+                <span class="lang-sr hidden">Prediktivna analitika</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Natural Language Processing</span>
+                <span class="lang-sr hidden">Obrada prirodnog jezika</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Computer Vision</span>
+                <span class="lang-sr hidden">Kompjuterska vizija</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="service-card bg-white rounded-xl p-8 shadow-lg" data-aos="fade-up" data-aos-delay="1000">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-link text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4 text-gray-900">
+              <span class="lang-en">System Integration</span>
+              <span class="lang-sr hidden">Integracija sistema</span>
+            </h3>
+            <p class="text-gray-600 mb-6">
+              <span class="lang-en">Seamless integration of existing systems and third-party services to create unified solutions.</span>
+              <span class="lang-sr hidden">Besprekorna integracija postojećih sistema i usluga treće strane za kreiranje jedinstvenih rešenja.</span>
+            </p>
+            <ul class="text-sm text-gray-600 space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Legacy System Migration</span>
+                <span class="lang-sr hidden">Migracija nasleđenih sistema</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Third-party APIs</span>
+                <span class="lang-sr hidden">API-ji treće strane</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check text-blue-600 mr-2"></i>
+                <span class="lang-en">Data Synchronization</span>
+                <span class="lang-sr hidden">Sinhronizacija podataka</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="content-section bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            <span class="lang-en">Our Development Process</span>
+            <span class="lang-sr hidden">Naš proces razvoja</span>
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+            <h4 class="text-xl font-semibold mb-2">
+              <span class="lang-en">Discovery</span>
+              <span class="lang-sr hidden">Otkrivanje</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Understanding your business requirements and project goals</span>
+              <span class="lang-sr hidden">Razumevanje vaših poslovnih zahteva i ciljeva projekta</span>
+            </p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+            <h4 class="text-xl font-semibold mb-2">
+              <span class="lang-en">Planning</span>
+              <span class="lang-sr hidden">Planiranje</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Creating detailed project roadmap and technical specifications</span>
+              <span class="lang-sr hidden">Kreiranje detaljne mape projekta i tehničkih specifikacija</span>
+            </p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+            <h4 class="text-xl font-semibold mb-2">
+              <span class="lang-en">Development</span>
+              <span class="lang-sr hidden">Razvoj</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Agile development with regular updates and feedback cycles</span>
+              <span class="lang-sr hidden">Agile razvoj sa redovnim ažuriranjima i ciklusima povratnih informacija</span>
+            </p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+            <h4 class="text-xl font-semibold mb-2">
+              <span class="lang-en">Deployment</span>
+              <span class="lang-sr hidden">Implementacija</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Seamless deployment with ongoing support and maintenance</span>
+              <span class="lang-sr hidden">Besprekorna implementacija sa kontinuiranom podrškom i održavanjem</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-blue-600">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          <span class="lang-en">Ready to Start Your Project?</span>
+          <span class="lang-sr hidden">Spremni da započnete svoj projekat?</span>
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          <span class="lang-en">Let's discuss your custom software development needs and create a solution that drives your business forward.</span>
+          <span class="lang-sr hidden">Razgovarajmo o vašim potrebama za prilagođeni razvoj softvera i kreirajmo rešenje koje pokreće vaše poslovanje napred.</span>
+        </p>
+        <a href="contact.html" class="px-8 py-3 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50 transition-colors">
+          <span class="lang-en">Start Your Project</span>
+          <span class="lang-sr hidden">Započnite svoj projekat</span>
+        </a>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="index.html" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            <span class="lang-en">Transforming businesses through innovative software solutions since 2023.</span>
+            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2023. godine.</span>
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+          </h3>
+          <ul class="space-y-4">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Company</span>
+            <span class="lang-sr hidden">Kompanija</span>
+          </h3>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Connect</span>
+            <span class="lang-sr hidden">Povežite se</span>
+          </h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          <span class="lang-en">&copy; 2025 DevSolutions. All rights reserved.</span>
+          <span class="lang-sr hidden">&copy; 2025 DevSolutions. Sva prava zadržana.</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

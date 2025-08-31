@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | DevSolutions - Professional Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link active">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-sr hidden">Portfolio</span>
+        </a>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Careers</span>
+          <span class="lang-sr hidden">Karijere</span>
+        </a>
+        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Partners</span>
+          <span class="lang-sr hidden">Partneri</span>
+        </a>
+        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">International</span>
+          <span class="lang-sr hidden">Međunarodna</span>
+        </a>
+        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Data Protection</span>
+          <span class="lang-sr hidden">Zaštita podataka</span>
+        </a>
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Portfolio</span>
+            <span class="lang-sr hidden">Portfolio</span>
+          </a>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Careers</span>
+            <span class="lang-sr hidden">Karijere</span>
+          </a>
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+          </a>
+          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">International</span>
+            <span class="lang-sr hidden">Međunarodna</span>
+          </a>
+          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Data Protection</span>
+            <span class="lang-sr hidden">Zaštita podataka</span>
+          </a>
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Portfolio</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Our Portfolio</h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+          Explore our diverse range of projects that showcase our expertise and capabilities in software development.
+        </p>
+      </div>
+    </section>
+
+    <!-- Portfolio Filter -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="mb-10 flex flex-wrap justify-center">
+          <div class="portfolio-filter flex flex-wrap gap-3 justify-center">
+            <button class="filter-btn px-6 py-2 rounded-full bg-blue-600 text-white" data-filter="all">All</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-800" data-filter="web">Web</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-800" data-filter="mobile">Mobile</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-800" data-filter="enterprise">Enterprise</button>
+            <button class="filter-btn px-6 py-2 rounded-full bg-gray-200 text-gray-800" data-filter="ecommerce">E-commerce</button>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-category="web">
+            <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="E-Learning Platform" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">E-Learning Platform</h3>
+              <p class="text-blue-100 mb-4">Web Development, UI/UX</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">E-Learning Platform</h3>
+              <p class="text-gray-600 mb-4">A comprehensive online learning management system with interactive courses and progress tracking.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">React</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Node.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">MongoDB</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="200" data-category="mobile">
+            <img src="https://cdn.pixabay.com/photo/2017/01/22/12/07/imac-1999636_1280.png" alt="Fitness Tracking App" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Fitness Tracking App</h3>
+              <p class="text-blue-100 mb-4">Mobile Development, UI/UX</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Fitness Tracking App</h3>
+              <p class="text-gray-600 mb-4">Cross-platform mobile app for fitness enthusiasts with workout tracking and social features.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">React Native</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Firebase</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Redux</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="300" data-category="enterprise">
+            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" alt="Enterprise Resource Planning" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Enterprise Resource Planning</h3>
+              <p class="text-blue-100 mb-4">Enterprise Solutions, Integration</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Enterprise Resource Planning</h3>
+              <p class="text-gray-600 mb-4">Comprehensive ERP system for manufacturing company with inventory and supply chain management.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">.NET</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">SQL Server</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Azure</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="400" data-category="ecommerce">
+            <img src="https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg" alt="Luxury Retail Platform" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Luxury Retail Platform</h3>
+              <p class="text-blue-100 mb-4">E-commerce, Web Development</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Luxury Retail Platform</h3>
+              <p class="text-gray-600 mb-4">High-end e-commerce platform with advanced product customization and premium user experience.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Vue.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Laravel</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Stripe</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="500" data-category="web">
+            <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="Healthcare Dashboard" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Healthcare Dashboard</h3>
+              <p class="text-blue-100 mb-4">Data Visualization, UX Design</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Healthcare Dashboard</h3>
+              <p class="text-gray-600 mb-4">Real-time analytics dashboard for healthcare providers with patient data visualization.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Angular</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">D3.js</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Python</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="600" data-category="mobile">
+            <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="Food Delivery App" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Food Delivery App</h3>
+              <p class="text-blue-100 mb-4">Mobile Development, UI/UX</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Food Delivery App</h3>
+              <p class="text-gray-600 mb-4">On-demand food delivery application with real-time tracking and payment integration.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Flutter</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Google Maps</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">PayPal</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="content-section bg-blue-600">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center text-white">
+          <div data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-4xl font-bold mb-2"><span class="counter-value">150</span>+</h3>
+            <p class="text-blue-100">Projects Completed</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-4xl font-bold mb-2"><span class="counter-value">98</span>%</h3>
+            <p class="text-blue-100">Client Satisfaction</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <h3 class="text-4xl font-bold mb-2"><span class="counter-value">25</span>+</h3>
+            <p class="text-blue-100">Industries Served</p>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="400">
+            <h3 class="text-4xl font-bold mb-2"><span class="counter-value">5</span>+</h3>
+            <p class="text-blue-100">Years Experience</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Ready to Start Your Project?
+        </h2>
+        <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how we can help bring your vision to life with our expertise and proven track record.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="contact.html" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            Start Your Project
+          </a>
+          <a href="services.html" class="px-8 py-3 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+            View Our Services
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="index.html" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            Transforming businesses through innovative software solutions since 2023.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-4">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 DevSolutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

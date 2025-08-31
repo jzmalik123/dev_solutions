@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | DevSolutions - Professional Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-sr hidden">Portfolio</span>
+        </a>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Careers</span>
+          <span class="lang-sr hidden">Karijere</span>
+        </a>
+        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Partners</span>
+          <span class="lang-sr hidden">Partneri</span>
+        </a>
+        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">International</span>
+          <span class="lang-sr hidden">Međunarodna</span>
+        </a>
+        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Data Protection</span>
+          <span class="lang-sr hidden">Zaštita podataka</span>
+        </a>
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link active">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Portfolio</span>
+            <span class="lang-sr hidden">Portfolio</span>
+          </a>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Careers</span>
+            <span class="lang-sr hidden">Karijere</span>
+          </a>
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+          </a>
+          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">International</span>
+            <span class="lang-sr hidden">Međunarodna</span>
+          </a>
+          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Data Protection</span>
+            <span class="lang-sr hidden">Zaštita podataka</span>
+          </a>
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">
+                <span class="lang-en">Home</span>
+                <span class="lang-sr hidden">Početna</span>
+              </a>
+            </li>
+            <li class="breadcrumb-item active">
+              <span class="lang-en">Contact</span>
+              <span class="lang-sr hidden">Kontakt</span>
+            </li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          <span class="lang-en">Get In Touch</span>
+          <span class="lang-sr hidden">Kontaktirajte nas</span>
+        </h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+          <span class="lang-en">Have a project in mind? Contact us and let's discuss how we can help you achieve your goals.</span>
+          <span class="lang-sr hidden">Imate projekat na umu? Kontaktirajte nas i razgovarajmo o tome kako vam možemo pomoći da ostvarite svoje ciljeve.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+          <div class="w-full lg:w-1/2" data-aos="fade-right">
+            <form id="contact-form" class="space-y-6">
+              <div>
+                <label for="name" class="block mb-2 text-sm font-medium text-gray-900">
+                  <span class="lang-en">Your Name</span>
+                  <span class="lang-sr hidden">Vaše ime</span>
+                </label>
+                <input type="text" id="name" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" required>
+                <div class="text-red-500 text-sm mt-1 hidden" id="name-error"></div>
+              </div>
+              <div>
+                <label for="email" class="block mb-2 text-sm font-medium text-gray-900">
+                  <span class="lang-en">Your Email</span>
+                  <span class="lang-sr hidden">Vaš email</span>
+                </label>
+                <input type="email" id="email" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" required>
+                <div class="text-red-500 text-sm mt-1 hidden" id="email-error"></div>
+              </div>
+              <div>
+                <label for="company" class="block mb-2 text-sm font-medium text-gray-900">
+                  <span class="lang-en">Company (Optional)</span>
+                  <span class="lang-sr hidden">Kompanija (opciono)</span>
+                </label>
+                <input type="text" id="company" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3">
+              </div>
+              <div>
+                <label for="subject" class="block mb-2 text-sm font-medium text-gray-900">
+                  <span class="lang-en">Subject</span>
+                  <span class="lang-sr hidden">Predmet</span>
+                </label>
+                <select id="subject" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" required>
+                  <option value="">
+                    <span class="lang-en">Select a subject</span>
+                    <span class="lang-sr hidden">Izaberite predmet</span>
+                  </option>
+                  <option value="general">
+                    <span class="lang-en">General Inquiry</span>
+                    <span class="lang-sr hidden">Opšti upit</span>
+                  </option>
+                  <option value="project">
+                    <span class="lang-en">New Project</span>
+                    <span class="lang-sr hidden">Novi projekat</span>
+                  </option>
+                  <option value="support">
+                    <span class="lang-en">Support</span>
+                    <span class="lang-sr hidden">Podrška</span>
+                  </option>
+                  <option value="partnership">
+                    <span class="lang-en">Partnership</span>
+                    <span class="lang-sr hidden">Partnerstvo</span>
+                  </option>
+                </select>
+                <div class="text-red-500 text-sm mt-1 hidden" id="subject-error"></div>
+              </div>
+              <div>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900">
+                  <span class="lang-en">Your Message</span>
+                  <span class="lang-sr hidden">Vaša poruka</span>
+                </label>
+                <textarea id="message" rows="5" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" required placeholder="Tell us about your project or inquiry..."></textarea>
+                <div class="text-red-500 text-sm mt-1 hidden" id="message-error"></div>
+              </div>
+              <div id="form-message" class="hidden p-4 rounded-lg"></div>
+              <button type="submit" id="submit-btn" class="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+                <span class="lang-en">Send Message</span>
+                <span class="lang-sr hidden">Pošalji poruku</span>
+              </button>
+            </form>
+          </div>
+          
+          <div class="w-full lg:w-1/2" data-aos="fade-left">
+            <div class="bg-gray-50 p-8 rounded-xl h-full">
+              <div class="mb-8">
+                <h3 class="text-2xl font-bold mb-4 text-gray-900">
+                  <span class="lang-en">Contact Information</span>
+                  <span class="lang-sr hidden">Kontakt informacije</span>
+                </h3>
+                <p class="text-gray-600 mb-6">
+                  <span class="lang-en">Feel free to reach out to us using the contact form or through any of the methods below.</span>
+                  <span class="lang-sr hidden">Slobodno nas kontaktirajte putem kontakt forme ili bilo kojim od metoda u nastavku.</span>
+                </p>
+              </div>
+              
+              <div class="space-y-6">
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-map-marker-alt text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">
+                      <span class="lang-en">Our Office</span>
+                      <span class="lang-sr hidden">Naša kancelarija</span>
+                    </h4>
+                    <p class="text-gray-600">
+                      <span class="lang-en">123 Tech Street, Business District<br>Belgrade, Serbia 11000</span>
+                      <span class="lang-sr hidden">Tehnološka ulica 123, Poslovna četvrt<br>Beograd, Srbija 11000</span>
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-envelope text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">
+                      <span class="lang-en">Email Us</span>
+                      <span class="lang-sr hidden">Pošaljite nam email</span>
+                    </h4>
+                    <p class="text-gray-600">
+                      <a href="mailto:info@devsolutions.com" class="hover:text-blue-600">info@devsolutions.com</a><br>
+                      <a href="mailto:projects@devsolutions.com" class="hover:text-blue-600">projects@devsolutions.com</a>
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-phone-alt text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">
+                      <span class="lang-en">Call Us</span>
+                      <span class="lang-sr hidden">Pozovite nas</span>
+                    </h4>
+                    <p class="text-gray-600">
+                      +381 11 123 4567<br>
+                      +381 11 765 4321
+                    </p>
+                  </div>
+                </div>
+                
+                <div class="flex items-start">
+                  <div class="bg-blue-100 p-3 rounded-full mr-4">
+                    <i class="fas fa-clock text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-semibold text-gray-900 mb-1">
+                      <span class="lang-en">Business Hours</span>
+                      <span class="lang-sr hidden">Radno vreme</span>
+                    </h4>
+                    <p class="text-gray-600">
+                      <span class="lang-en">Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 2:00 PM<br>Sunday: Closed</span>
+                      <span class="lang-sr hidden">Ponedeljak - Petak: 09:00 - 18:00<br>Subota: 10:00 - 14:00<br>Nedelja: Zatvoreno</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="mt-10">
+                <h4 class="font-semibold text-gray-900 mb-4">
+                  <span class="lang-en">Follow Us</span>
+                  <span class="lang-sr hidden">Pratite nas</span>
+                </h4>
+                <div class="flex space-x-4">
+                  <a href="javascript:void(0)" class="bg-white hover:bg-blue-600 hover:text-white transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="bg-white hover:bg-blue-600 hover:text-white transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="bg-white hover:bg-blue-600 hover:text-white transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                  <a href="javascript:void(0)" class="bg-white hover:bg-blue-600 hover:text-white transition-colors w-10 h-10 rounded-full flex items-center justify-center shadow-md">
+                    <i class="fab fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="content-section bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            <span class="lang-en">Find Us</span>
+            <span class="lang-sr hidden">Pronađite nas</span>
+          </h2>
+        </div>
+        
+        <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+          <div class="h-96 bg-gray-200 flex items-center justify-center">
+            <div class="text-center">
+              <i class="fas fa-map-marker-alt text-4xl text-blue-600 mb-4"></i>
+              <p class="text-gray-600">
+                <span class="lang-en">Interactive map would be embedded here</span>
+                <span class="lang-sr hidden">Interaktivna mapa bi bila ugrađena ovde</span>
+              </p>
+              <p class="text-sm text-gray-500 mt-2">
+                <span class="lang-en">123 Tech Street, Business District, Belgrade, Serbia</span>
+                <span class="lang-sr hidden">Tehnološka ulica 123, Poslovna četvrt, Beograd, Srbija</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            <span class="lang-en">Frequently Asked Questions</span>
+            <span class="lang-sr hidden">Često postavljana pitanja</span>
+          </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto space-y-6">
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h4 class="text-lg font-semibold mb-2">
+              <span class="lang-en">What is your typical project timeline?</span>
+              <span class="lang-sr hidden">Koliko obično traje projekat?</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Project timelines vary depending on complexity and scope. Simple projects can take 2-4 weeks, while complex enterprise solutions may take 3-6 months or more.</span>
+              <span class="lang-sr hidden">Vreme trajanja projekta zavisi od složenosti i obima. Jednostavni projekti mogu trajati 2-4 nedelje, dok složena poslovna rešenja mogu trajati 3-6 meseci ili više.</span>
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h4 class="text-lg font-semibold mb-2">
+              <span class="lang-en">Do you provide ongoing support and maintenance?</span>
+              <span class="lang-sr hidden">Da li pružate kontinuiranu podršku i održavanje?</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">Yes, we offer comprehensive support and maintenance packages to ensure your software continues to perform optimally after deployment.</span>
+              <span class="lang-sr hidden">Da, nudimo sveobuhvatne pakete podrške i održavanja kako bi vaš softver nastavio da radi optimalno nakon implementacije.</span>
+            </p>
+          </div>
+          
+          <div class="bg-gray-50 rounded-lg p-6">
+            <h4 class="text-lg font-semibold mb-2">
+              <span class="lang-en">What technologies do you work with?</span>
+              <span class="lang-sr hidden">Sa kojim tehnologijama radite?</span>
+            </h4>
+            <p class="text-gray-600">
+              <span class="lang-en">We work with a wide range of modern technologies including React, Angular, Node.js, Python, Java, .NET, AWS, Azure, and many more.</span>
+              <span class="lang-sr hidden">Radimo sa širokim spektrom modernih tehnologija uključujući React, Angular, Node.js, Python, Java, .NET, AWS, Azure i mnoge druge.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="index.html" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            <span class="lang-en">Transforming businesses through innovative software solutions since 2023.</span>
+            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2023. godine.</span>
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-4">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 DevSolutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Feedback Widget -->
+  <div class="feedback-widget">
+    <button id="feedback-button" class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-lg transition-colors">
+      <i class="fas fa-comments"></i>
+    </button>
+  </div>
+  
+  <!-- Feedback Modal -->
+  <div id="feedback-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-white rounded-xl p-8 max-w-md w-full">
+      <div class="flex justify-between items-center mb-6">
+        <h3 class="text-xl font-bold text-gray-900">
+          <span class="lang-en">Send Feedback</span>
+          <span class="lang-sr hidden">Pošaljite povratne informacije</span>
+        </h3>
+        <button id="close-feedback" class="text-gray-400 hover:text-gray-600">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <form id="feedback-form">
+        <div class="mb-4">
+          <label class="block mb-2 text-sm font-medium text-gray-900">
+            <span class="lang-en">How would you rate your experience?</span>
+            <span class="lang-sr hidden">Kako biste ocenili svoje iskustvo?</span>
+          </label>
+          <div class="flex space-x-2">
+            <button type="button" class="rating-btn p-2 border rounded-md hover:bg-gray-100" data-rating="1">1</button>
+            <button type="button" class="rating-btn p-2 border rounded-md hover:bg-gray-100" data-rating="2">2</button>
+            <button type="button" class="rating-btn p-2 border rounded-md hover:bg-gray-100" data-rating="3">3</button>
+            <button type="button" class="rating-btn p-2 border rounded-md hover:bg-gray-100" data-rating="4">4</button>
+            <button type="button" class="rating-btn p-2 border rounded-md hover:bg-gray-100" data-rating="5">5</button>
+          </div>
+        </div>
+        <div class="mb-4">
+          <label for="feedback-text" class="block mb-2 text-sm font-medium text-gray-900">
+            <span class="lang-en">Your feedback</span>
+            <span class="lang-sr hidden">Vaše povratne informacije</span>
+          </label>
+          <textarea id="feedback-text" rows="4" class="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3"></textarea>
+        </div>
+        <button type="submit" class="w-full px-6 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+          <span class="lang-en">Submit Feedback</span>
+          <span class="lang-sr hidden">Pošaljite povratne informacije</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

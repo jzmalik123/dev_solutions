@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | DevSolutions - Professional Software Development</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+      </a>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+          </div>
+        </div>
+        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Portfolio</span>
+          <span class="lang-sr hidden">Portfolio</span>
+        </a>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link active">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Careers</span>
+          <span class="lang-sr hidden">Karijere</span>
+        </a>
+        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Partners</span>
+          <span class="lang-sr hidden">Partneri</span>
+        </a>
+        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">International</span>
+          <span class="lang-sr hidden">Međunarodna</span>
+        </a>
+        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Data Protection</span>
+          <span class="lang-sr hidden">Zaštita podataka</span>
+        </a>
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </div>
+          </div>
+          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Portfolio</span>
+            <span class="lang-sr hidden">Portfolio</span>
+          </a>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Careers</span>
+            <span class="lang-sr hidden">Karijere</span>
+          </a>
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+          </a>
+          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">International</span>
+            <span class="lang-sr hidden">Međunarodna</span>
+          </a>
+          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Data Protection</span>
+            <span class="lang-sr hidden">Zaštita podataka</span>
+          </a>
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">Home</a>
+            </li>
+            <li class="breadcrumb-item active">Blog</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">Latest Insights</h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+          Stay updated with the latest technology trends and insights from our experts.
+        </p>
+      </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">Technology</span>
+                <span class="ml-4 text-gray-500 text-sm">March 15, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                The Future of AI in Software Development
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Explore how artificial intelligence is transforming the software development landscape and what it means for businesses.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">Cloud</span>
+                <span class="ml-4 text-gray-500 text-sm">March 5, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                Optimizing Cloud Infrastructure for Performance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Learn strategies and best practices for maximizing the performance of your cloud infrastructure while minimizing costs.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">Mobile</span>
+                <span class="ml-4 text-gray-500 text-sm">February 25, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                Building Cross-Platform Mobile Apps in 2025
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Discover the latest tools and frameworks for developing efficient cross-platform mobile applications.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">Security</span>
+                <span class="ml-4 text-gray-500 text-sm">February 18, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                Cybersecurity Best Practices for Modern Applications
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Essential security measures every development team should implement to protect their applications and user data.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">DevOps</span>
+                <span class="ml-4 text-gray-500 text-sm">February 10, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                Implementing CI/CD Pipelines for Faster Deployment
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A comprehensive guide to setting up continuous integration and deployment pipelines for your development workflow.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+          
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
+            <img src="https://cdn.pixabay.com/photo/2016/11/23/14/37/blur-1853262_1280.jpg" alt="Blog Post" class="w-full h-52 object-cover">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <span class="bg-blue-100 text-blue-600 text-sm font-medium px-3 py-1 rounded-full">Web Development</span>
+                <span class="ml-4 text-gray-500 text-sm">January 28, 2025</span>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-gray-900">
+                Modern Frontend Frameworks: A Comparison Guide
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Compare the latest frontend frameworks and choose the right one for your next web development project.
+              </p>
+              <a href="javascript:void(0)" class="text-blue-600 font-medium hover:text-blue-800 transition-colors inline-flex items-center">
+                Read More
+                <i class="fas fa-arrow-right ml-2 text-sm"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="mt-12 flex justify-center">
+          <nav aria-label="Blog pagination">
+            <ul class="pagination">
+              <li class="page-item disabled">
+                <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="javascript:void(0)" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="content-section bg-blue-600">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          Stay Updated
+        </h2>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Subscribe to our newsletter and get the latest insights delivered directly to your inbox.
+        </p>
+        <form class="max-w-md mx-auto flex">
+          <input type="email" placeholder="Enter your email" class="flex-grow px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-blue-300">
+          <button type="submit" class="bg-white text-blue-600 px-6 py-3 rounded-r-lg font-medium hover:bg-blue-50 transition-colors">
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="index.html" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            Transforming businesses through innovative software solutions since 2023.
+          </p>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Services</h3>
+          <ul class="space-y-4">
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
+            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Company</h3>
+          <ul class="space-y-4">
+            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Connect</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">&copy; 2025 DevSolutions. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
