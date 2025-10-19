@@ -281,10 +281,6 @@
       }
     }
 
-     /* Dropdown styling */
-    .group:hover .group-hover\:block {
-      display: block;
-    }
 
     /* Mobile dropdown styling */
     .mobile-dropdown-menu {
@@ -316,7 +312,7 @@
             <span class="lang-sr hidden">Usluge</span>
             <i class="fas fa-chevron-down ml-1 text-xs"></i>
           </a>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
             <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
               <span class="lang-en">Products</span>
               <span class="lang-sr hidden">Proizvodi</span>
@@ -325,12 +321,12 @@
               <span class="lang-en">Projects</span>
               <span class="lang-sr hidden">Projekti</span>
             </a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Portfolio</span>
+              <span class="lang-sr hidden">Portfolio</span>
+            </a>
+          </div>
         </div>
-        </div>
-        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Portfolio</span>
-          <span class="lang-sr hidden">Portfolio</span>
-        </a>
         <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Blog</span>
           <span class="lang-sr hidden">Blog</span>
@@ -339,14 +335,19 @@
           <span class="lang-en">Careers</span>
           <span class="lang-sr hidden">Karijere</span>
         </a>
-        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Partners</span>
-          <span class="lang-sr hidden">Partneri</span>
-        </a>
-        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">International</span>
-          <span class="lang-sr hidden">Međunarodna</span>
-        </a>
+        <div class="relative group">
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
+            <a href="international.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">International Partners</span>
+              <span class="lang-sr hidden">Međunarodni partneri</span>
+            </a>
+          </div>
+        </div>
         <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Data Protection</span>
           <span class="lang-sr hidden">Zaštita podataka</span>
@@ -403,12 +404,12 @@
                 <span class="lang-en">Projects</span>
                 <span class="lang-sr hidden">Projekti</span>
               </a>
+              <a href="portfolio.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Portfolio</span>
+                <span class="lang-sr hidden">Portfolio</span>
+              </a>
             </div>
           </div>
-          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Portfolio</span>
-            <span class="lang-sr hidden">Portfolio</span>
-          </a>
           <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Blog</span>
             <span class="lang-sr hidden">Blog</span>
@@ -417,14 +418,21 @@
             <span class="lang-en">Careers</span>
             <span class="lang-sr hidden">Karijere</span>
           </a>
-          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Partners</span>
-            <span class="lang-sr hidden">Partneri</span>
-          </a>
-          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">International</span>
-            <span class="lang-sr hidden">Međunarodna</span>
-          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">International Partners</span>
+                <span class="lang-sr hidden">Međunarodni partneri</span>
+              </a>
+            </div>
+          </div>
           <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Data Protection</span>
             <span class="lang-sr hidden">Zaštita podataka</span>
@@ -1127,6 +1135,156 @@
                   <div>
                     <h4 class="font-bold text-gray-900">David Chen</h4>
                     <p class="text-gray-600">CTO, Finance Solutions Corp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"They were more than willing to help with my growth. Helped me reach more customers."</span>
+                  <span class="lang-sr hidden">"Bili su više nego voljni da pomognu u mom rastu. Pomogli su mi da dođem do više kupaca."</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Jelena Femic</h4>
+                    <p class="text-gray-600">Employee, Pom Hash Stars</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"We truly appreciate the fast response and professionalism from the SYSQBIT team. Our profile issue was resolved very quickly, with excellent communication and full support throughout. It's refreshing to work with a team that knows what they're doing and also shows a human touch. Highly recommended!"</span>
+                  <span class="lang-sr hidden">"Zaista cenimo brz odgovor i profesionalnost SYSQBIT tima. Problem sa našim profilom je rešen vrlo brzo, uz odličnu komunikaciju i punu podršku tokom celog procesa. Osvežavajuće je raditi sa timom koji zna šta radi i pokazuje ljudski pristup. Toplo preporučujem!"</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2017/08/06/09/52/black-and-white-2590810_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Biro</h4>
+                    <p class="text-gray-600">Business Owner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"Excellent cooperation and highly professional approach! The team at SYSQBIT demonstrated a high level of expertise and dedication. Everything went smoothly, efficiently, and transparently – with no hidden information or uncertainties. I especially appreciate their kindness and willingness to explain every step, even when something was new to me as a user. I highly recommend them to anyone looking for reliability, quality, and a fair partnership."</span>
+                  <span class="lang-sr hidden">"Odlična saradnja i veoma profesionalan pristup! SYSQBIT tim je pokazao visok nivo stručnosti i posvećenosti. Sve je prošlo glatko, efikasno i transparentno – bez skrivenih informacija ili nesigurnosti. Posebno cenim njihovu ljubaznost i spremnost da objasne svaki korak, čak i kada mi nešto nije bilo novo kao korisniku. Toplo preporučujem svima koji traže pouzdanost, kvalitet i fer partnerstvo."</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2018/01/15/07/51/woman-3083383_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Tijana Boskovic</h4>
+                    <p class="text-gray-600">Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"I have been working with sysqbit for a few months now, all i can say is that you can always expect top quality from Željana and her team!"</span>
+                  <span class="lang-sr hidden">"Radim sa sysqbit-om nekoliko meseci, jedino što mogu da kažem je da uvek možete očekivati vrhunski kvalitet od Željane i njenog tima!"</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Djordje</h4>
+                    <p class="text-gray-600">Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"I'm based in the US and I've been collaborating with Zeljana and her company since last year. I connect her with potential clients in the US, and she takes her time to talk to them about what would they like to accomplish. She is always very transparent about can she bring them the results they need. We've only had happy clients so far and I am happy myself to be a part of the team and always refer her!"</span>
+                  <span class="lang-sr hidden">"Baziran sam u SAD-u i saradim sa Željanom i njekom kompanijom od prošle godine. Povezujem je sa potencijalnim klijentima u SAD-u, a ona uzima vreme da razgovara sa njima o tome šta bi želeli da postignu. Uvek je veoma transparentna oko toga da li može da im donese rezultate koji su potrebni. Do sada smo imali samo zadovoljne klijente i ja sam srećan što sam deo tima i uvek je preporučujem!"</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2017/02/16/23/10/smile-2072907_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Suzana Milenkovic</h4>
+                    <p class="text-gray-600">US Business Partner</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"I am impressed by their professionalism, high-quality software solutions, responsiveness, efficient communication and dedication to our needs."</span>
+                  <span class="lang-sr hidden">"Impresionirana sam njihovim profesionalizmom, visokokvalitetnim softverskim rešenjima, odzivom, efikasnom komunikacijom i posvećenošću našim potrebama."</span>
+                </p>
+                <div class="flex items-center">
+                  <img src="https://cdn.pixabay.com/photo/2018/04/05/14/09/portrait-3292287_1280.jpg" alt="Client" class="w-12 h-12 rounded-full object-cover mr-4">
+                  <div>
+                    <h4 class="font-bold text-gray-900">Maja Takač</h4>
+                    <p class="text-gray-600">Client</p>
                   </div>
                 </div>
               </div>
@@ -2238,6 +2396,74 @@
         });
       });
 
+      // Desktop dropdown handling with JavaScript for better reliability
+      const dropdownGroups = document.querySelectorAll('.relative.group');
+      dropdownGroups.forEach(group => {
+        const trigger = group.querySelector('a');
+        const dropdown = group.querySelector('.dropdown-menu');
+        
+        if (trigger && dropdown) {
+          let showTimeout;
+          let hideTimeout;
+          let isHovered = false;
+          
+          // Show dropdown on mouse enter
+          const showDropdown = () => {
+            clearTimeout(hideTimeout);
+            showTimeout = setTimeout(() => {
+              dropdown.classList.remove('hidden');
+              isHovered = true;
+            }, 30);
+          };
+          
+          // Hide dropdown on mouse leave
+          const hideDropdown = () => {
+            clearTimeout(showTimeout);
+            hideTimeout = setTimeout(() => {
+              dropdown.classList.add('hidden');
+              isHovered = false;
+            }, 150);
+          };
+          
+          // Mouse events for the group container with improved logic
+          group.addEventListener('mouseenter', showDropdown);
+          group.addEventListener('mouseleave', (e) => {
+            // Only hide if mouse is not moving to dropdown or trigger
+            if (!dropdown.contains(e.relatedTarget) && !trigger.contains(e.relatedTarget)) {
+              hideDropdown();
+            }
+          });
+          
+          // Mouse events for the dropdown itself
+          dropdown.addEventListener('mouseenter', () => {
+            clearTimeout(hideTimeout);
+            clearTimeout(showTimeout);
+            dropdown.classList.remove('hidden');
+            isHovered = true;
+          });
+          
+          dropdown.addEventListener('mouseleave', (e) => {
+            // Only hide if mouse is not moving to trigger or group
+            if (!group.contains(e.relatedTarget) && !trigger.contains(e.relatedTarget)) {
+              hideDropdown();
+            }
+          });
+          
+          // Also handle mouseenter on the trigger link specifically for extra reliability
+          trigger.addEventListener('mouseenter', showDropdown);
+          
+          // Additional safety: hide on window blur or click outside
+          document.addEventListener('click', (e) => {
+            if (!group.contains(e.target) && isHovered) {
+              dropdown.classList.add('hidden');
+              isHovered = false;
+              clearTimeout(showTimeout);
+              clearTimeout(hideTimeout);
+            }
+          });
+        }
+      });
+
       // Fetch content from CMS for new sections
       function fetchContent(params) {
         const { page, lang } = params;
@@ -2412,7 +2638,42 @@
 
       // Initial load of dynamic content
       loadDynamicContent();
+
+      // Cookie acknowledgement
+      const cookieConsent = document.getElementById('cookie-consent');
+      const acceptCookies = document.getElementById('accept-cookies');
+      
+      // Check if user has already accepted cookies
+      const cookieAccepted = localStorage.getItem('cookieAccepted');
+      if (!cookieAccepted && cookieConsent) {
+        cookieConsent.classList.remove('hidden');
+      }
+      
+      if (acceptCookies) {
+        acceptCookies.addEventListener('click', function() {
+          localStorage.setItem('cookieAccepted', 'true');
+          cookieConsent.classList.add('hidden');
+        });
+      }
     });
   </script>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0 md:mr-6">
+          <p class="text-sm">
+            <span class="lang-en">We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept Cookies", you consent to our use of cookies.</span>
+            <span class="lang-sr hidden">Koristimo kolačiće za poboljšanje vašeg iskustva pregledanja i analizu našeg saobraćaja. Klikom na "Prihvati kolačiće" pristajete na naše korišćenje kolačića.</span>
+          </p>
+        </div>
+        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium">
+          <span class="lang-en">Accept Cookies</span>
+          <span class="lang-sr hidden">Prihvati kolačiće</span>
+        </button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

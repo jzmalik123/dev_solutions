@@ -214,9 +214,9 @@ document.addEventListener('DOMContentLoaded', function() {
           
           const language = localStorage.getItem('language') || 'en';
           if (language === 'en') {
-            formMessage.textContent = 'Thank you! Your message has been sent successfully.';
+            formMessage.innerHTML = 'The message has been successfully sent.<br>The details will be delivered to the email address <strong>info@sysqbit.com</strong>';
           } else {
-            formMessage.textContent = 'Hvala! Vaša poruka je uspešno poslata.';
+            formMessage.innerHTML = 'Poruka je uspešno poslata.<br>Detalji će biti dostavljeni na email adresu <strong>info@sysqbit.com</strong>';
           }
           
           // Reset form
@@ -421,5 +421,90 @@ document.addEventListener('DOMContentLoaded', function() {
   // Load dynamic content if function exists
   if (typeof loadDynamicContent === 'function') {
     loadDynamicContent();
+  }
+
+  // Desktop dropdown handling with JavaScript for better reliability
+  const dropdownGroups = document.querySelectorAll('.relative.group');
+  dropdownGroups.forEach(group => {
+    const trigger = group.querySelector('a');
+    const dropdown = group.querySelector('.dropdown-menu');
+    
+    if (trigger && dropdown) {
+      let showTimeout;
+      let hideTimeout;
+      let isHovered = false;
+      
+      // Show dropdown on mouse enter
+      const showDropdown = () => {
+        clearTimeout(hideTimeout);
+        showTimeout = setTimeout(() => {
+          dropdown.classList.remove('hidden');
+          isHovered = true;
+        }, 30);
+      };
+      
+      // Hide dropdown on mouse leave
+      const hideDropdown = () => {
+        clearTimeout(showTimeout);
+        hideTimeout = setTimeout(() => {
+          dropdown.classList.add('hidden');
+          isHovered = false;
+        }, 150);
+      };
+      
+      // Mouse events for the group container with improved logic
+      group.addEventListener('mouseenter', showDropdown);
+      group.addEventListener('mouseleave', (e) => {
+        // Only hide if mouse is not moving to dropdown or trigger
+        if (!dropdown.contains(e.relatedTarget) && !trigger.contains(e.relatedTarget)) {
+          hideDropdown();
+        }
+      });
+      
+      // Mouse events for the dropdown itself
+      dropdown.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout);
+        clearTimeout(showTimeout);
+        dropdown.classList.remove('hidden');
+        isHovered = true;
+      });
+      
+      dropdown.addEventListener('mouseleave', (e) => {
+        // Only hide if mouse is not moving to trigger or group
+        if (!group.contains(e.relatedTarget) && !trigger.contains(e.relatedTarget)) {
+          hideDropdown();
+        }
+      });
+      
+      // Also handle mouseenter on the trigger link specifically for extra reliability
+      trigger.addEventListener('mouseenter', showDropdown);
+      
+      // Additional safety: hide on window blur or click outside
+      document.addEventListener('click', (e) => {
+        if (!group.contains(e.target) && isHovered) {
+          dropdown.classList.add('hidden');
+          isHovered = false;
+          clearTimeout(showTimeout);
+          clearTimeout(hideTimeout);
+        }
+      });
+    }
+  });
+
+  // Cookie acknowledgement
+  const cookieConsent = document.getElementById('cookie-consent');
+  const acceptCookies = document.getElementById('accept-cookies');
+  
+  // Check if user has already accepted cookies
+  const cookieAccepted = localStorage.getItem('cookieAccepted');
+  if (!cookieAccepted && cookieConsent) {
+    cookieConsent.classList.remove('hidden');
+  }
+  
+  if (acceptCookies) {
+    acceptCookies.addEventListener('click', function() {
+      localStorage.setItem('cookieAccepted', 'true');
+      cookieConsent.classList.add('hidden');
+    });
   }
 });

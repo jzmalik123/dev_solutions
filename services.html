@@ -33,7 +33,7 @@
             <span class="lang-sr hidden">Usluge</span>
             <i class="fas fa-chevron-down ml-1 text-xs"></i>
           </a>
-          <div class="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 hidden group-hover:block">
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
             <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
               <span class="lang-en">Products</span>
               <span class="lang-sr hidden">Proizvodi</span>
@@ -42,12 +42,12 @@
               <span class="lang-en">Projects</span>
               <span class="lang-sr hidden">Projekti</span>
             </a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Portfolio</span>
+              <span class="lang-sr hidden">Portfolio</span>
+            </a>
           </div>
         </div>
-        <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Portfolio</span>
-          <span class="lang-sr hidden">Portfolio</span>
-        </a>
         <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Blog</span>
           <span class="lang-sr hidden">Blog</span>
@@ -56,14 +56,19 @@
           <span class="lang-en">Careers</span>
           <span class="lang-sr hidden">Karijere</span>
         </a>
-        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Partners</span>
-          <span class="lang-sr hidden">Partneri</span>
-        </a>
-        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">International</span>
-          <span class="lang-sr hidden">Međunarodna</span>
-        </a>
+        <div class="relative group">
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
+            <a href="international.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">International Partners</span>
+              <span class="lang-sr hidden">Međunarodni partneri</span>
+            </a>
+          </div>
+        </div>
         <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Data Protection</span>
           <span class="lang-sr hidden">Zaštita podataka</span>
@@ -545,6 +550,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0 md:mr-6">
+          <p class="text-sm">
+            <span class="lang-en">We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept Cookies", you consent to our use of cookies.</span>
+            <span class="lang-sr hidden">Koristimo kolačiće za poboljšanje vašeg iskustva pregledanja i analizu našeg saobraćaja. Klikom na "Prihvati kolačiće" pristajete na naše korišćenje kolačića.</span>
+          </p>
+        </div>
+        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium">
+          <span class="lang-en">Accept Cookies</span>
+          <span class="lang-sr hidden">Prihvati kolačiće</span>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
