@@ -96,8 +96,10 @@ document.addEventListener("DOMContentLoaded", function () {
      MOBILE DROPDOWNS
   ====================== */
   document.querySelectorAll(".mobile-dropdown-toggle").forEach((toggle) => {
-    toggle.addEventListener("click", () => {
-      const menu = toggle.nextElementSibling;
+    toggle.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const dropdown = toggle.closest(".mobile-dropdown");
+      const menu = dropdown ? dropdown.querySelector(".mobile-dropdown-menu") : null;
       const icon = toggle.querySelector("i");
 
       if (menu) menu.classList.toggle("hidden");
