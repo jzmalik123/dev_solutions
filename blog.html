@@ -122,12 +122,14 @@
             <span class="lang-sr hidden">O nama</span>
           </a>
           <div class="mobile-dropdown">
-            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
-              <div>
+            <div class="flex items-center justify-between py-2">
+              <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors mobile-nav-link">
                 <span class="lang-en">Services</span>
                 <span class="lang-sr hidden">Usluge</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs"></i>
+              </a>
+              <button class="mobile-dropdown-toggle text-gray-800 hover:text-blue-600 cursor-pointer ml-2 px-1">
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
             </div>
             <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
               <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
@@ -165,12 +167,14 @@
             <span class="lang-sr hidden">Po čemu smo drugačiji</span>
           </a>
           <div class="mobile-dropdown">
-            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
-              <div>
+            <div class="flex items-center justify-between py-2">
+              <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors mobile-nav-link">
                 <span class="lang-en">Partners</span>
                 <span class="lang-sr hidden">Partneri</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs"></i>
+              </a>
+              <button class="mobile-dropdown-toggle text-gray-800 hover:text-blue-600 cursor-pointer ml-2 px-1">
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
             </div>
             <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
               <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
@@ -211,8 +215,8 @@
     <!-- Blog Posts -->
     <section class="content-section bg-white">
       <div class="container mx-auto px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="100">
+        <div id="blog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="1" data-aos="fade-up" data-aos-delay="100">
             <img src="assets/images/slika4.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -231,7 +235,7 @@
             </div>
           </div>
           
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="200">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="1" data-aos="fade-up" data-aos-delay="200">
             <img src="assets/images/slika3.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -248,7 +252,7 @@
             </div>
           </div>
           
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="300">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="1" data-aos="fade-up" data-aos-delay="300">
             <img src="assets/images/slika2.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -268,7 +272,7 @@
             </div> 
           </div>
           
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="400">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="2" data-aos="fade-up" data-aos-delay="400">
             <img src="assets/images/slika11.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -287,7 +291,7 @@ Through these interactions, we successfully established strategic partnerships w
             </div>
           </div>
           
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="500">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="2" data-aos="fade-up" data-aos-delay="500">
             <img src="assets/images/slika12.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -309,7 +313,7 @@ The event also allowed us to showcase our advanced digital solutions and connect
             </div>
           </div>
           
-          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-aos="fade-up" data-aos-delay="600">
+          <div class="blog-card bg-white rounded-xl overflow-hidden shadow-lg" data-page="2" data-aos="fade-up" data-aos-delay="600">
             <img src="assets/images/slika14.jpeg" alt="Blog Post" class="w-full h-52 object-cover">
             <div class="p-6">
               <div class="flex items-center mb-4">
@@ -332,16 +336,15 @@ During the event, we exchanged ideas with experts from diverse industries and id
         <!-- Pagination -->
         <div class="mt-12 flex justify-center">
           <nav aria-label="Blog pagination">
-            <ul class="pagination">
-              <li class="page-item disabled">
+            <ul class="pagination" id="blog-pagination">
+              <li class="page-item disabled" id="prev-btn">
                 <a class="page-link" href="javascript:void(0)" aria-label="Previous">
                   <span aria-hidden="true">&laquo;</span>
                 </a>
               </li>
-              <li class="page-item active"><a class="page-link" href="javascript:void(0)">1</a></li>
-              <li class="page-item"><a class="page-link" href="javascript:void(0)">2</a></li>
-              <li class="page-item"><a class="page-link" href="javascript:void(0)">3</a></li>
-              <li class="page-item">
+              <li class="page-item active"><a class="page-link" href="javascript:void(0)" data-page="1">1</a></li>
+              <li class="page-item"><a class="page-link" href="javascript:void(0)" data-page="2">2</a></li>
+              <li class="page-item" id="next-btn">
                 <a class="page-link" href="javascript:void(0)" aria-label="Next">
                   <span aria-hidden="true">&raquo;</span>
                 </a>
@@ -499,7 +502,7 @@ During the event, we exchanged ideas with experts from diverse industries and id
           <span class="lang-sr hidden">&copy; 2025 SYSQBIT. Sva prava zadržana.</span>
         </p>
         <div class="flex space-x-6">
-          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+          <a href="privacypolicy/PrivacyPolicy.pdf" target="_blank" class="text-gray-400 hover:text-white transition-colors">
             <span class="lang-en">Privacy Policy</span>
             <span class="lang-sr hidden">Politika privatnosti</span>
           </a>
@@ -533,5 +536,54 @@ During the event, we exchanged ideas with experts from diverse industries and id
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    (function () {
+      var currentPage = 1;
+      var totalPages = 2;
+
+      function showPage(page) {
+        currentPage = page;
+        var cards = document.querySelectorAll('.blog-card');
+        cards.forEach(function (card) {
+          card.style.display = parseInt(card.getAttribute('data-page')) === page ? '' : 'none';
+        });
+
+        // Update page number buttons
+        document.querySelectorAll('#blog-pagination [data-page]').forEach(function (btn) {
+          btn.parentElement.classList.toggle('active', parseInt(btn.getAttribute('data-page')) === page);
+        });
+
+        // Prev / Next state
+        document.getElementById('prev-btn').classList.toggle('disabled', page === 1);
+        document.getElementById('next-btn').classList.toggle('disabled', page === totalPages);
+
+        // Scroll to top of blog section
+        var grid = document.getElementById('blog-grid');
+        if (grid) grid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Page number buttons
+        document.querySelectorAll('#blog-pagination [data-page]').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            showPage(parseInt(this.getAttribute('data-page')));
+          });
+        });
+
+        // Previous button
+        document.getElementById('prev-btn').addEventListener('click', function () {
+          if (currentPage > 1) showPage(currentPage - 1);
+        });
+
+        // Next button
+        document.getElementById('next-btn').addEventListener('click', function () {
+          if (currentPage < totalPages) showPage(currentPage + 1);
+        });
+
+        // Show first page on load
+        showPage(1);
+      });
+    })();
+  </script>
 </body>
 </html>
