@@ -407,12 +407,14 @@
             <span class="lang-sr hidden">O nama</span>
           </a>
           <div class="mobile-dropdown">
-            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
-              <div>
+            <div class="flex items-center justify-between py-2">
+              <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors mobile-nav-link">
                 <span class="lang-en">Services</span>
                 <span class="lang-sr hidden">Usluge</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs"></i>
+              </a>
+              <button class="mobile-dropdown-toggle text-gray-800 hover:text-blue-600 cursor-pointer ml-2 px-1">
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
             </div>
             <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
               <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
@@ -450,12 +452,14 @@
             <span class="lang-sr hidden">Po čemu smo drugačiji</span>
           </a>
           <div class="mobile-dropdown">
-            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
-              <div>
+            <div class="flex items-center justify-between py-2">
+              <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors mobile-nav-link">
                 <span class="lang-en">Partners</span>
                 <span class="lang-sr hidden">Partneri</span>
-              </div>
-              <i class="fas fa-chevron-down text-xs"></i>
+              </a>
+              <button class="mobile-dropdown-toggle text-gray-800 hover:text-blue-600 cursor-pointer ml-2 px-1">
+                <i class="fas fa-chevron-down text-xs"></i>
+              </button>
             </div>
             <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
               <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
@@ -958,6 +962,58 @@ Satisfaction</span>
                 </div>
               </div>
             </div>
+
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"All sincere recommendations from the heart. Available half the day and night, fast and efficient. Successful and the best. ALL RECOMMENDATIONS"</span>
+                  <span class="lang-sr hidden">"Sve iskrene preporuke iz srca. Dostupni pola dana i noći, brzi i efikasni. Uspešni i najbolji. SVE PREPORUKE"</span>
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full bg-blue-500 flex items-center justify-center text-white font-bold text-lg mr-4">J</div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">Jelena Bajicslavkovic</h4>
+                    <p class="text-gray-600">Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="bg-gray-50 p-8 md:p-10 rounded-xl shadow-lg">
+                <div class="flex items-center mb-6">
+                  <div class="text-yellow-400 flex">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 text-lg mb-6">
+                  <span class="lang-en">"Extremely professional and reliable team! SYSQBIT has proven their expertise, quality, and dedication to clients time and time again. Full trust and a sincere recommendation!"</span>
+                  <span class="lang-sr hidden">"Izuzetno profesionalan i pouzdan tim! SYSQBIT je uvek iznova dokazivao svoju stručnost, kvalitet i posvećenost klijentima. Puno poverenje i iskrena preporuka!"</span>
+                </p>
+                <div class="flex items-center">
+                  <div class="w-12 h-12 rounded-full bg-gray-100 border border-gray-200 flex items-center justify-center mr-4">
+                    <span class="text-xs font-bold text-gray-700">NOA</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-900">NOA Pizzeria &amp; Caffe</h4>
+                    <p class="text-gray-600">Client</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="swiper-pagination mt-8"></div>
         </div>
@@ -1204,7 +1260,7 @@ Satisfaction</span>
           <span class="lang-sr hidden">&copy; 2025 SYSQBIT. Sva prava zadržana.</span>
         </p>
         <div class="flex space-x-6">
-          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+          <a href="privacypolicy/PrivacyPolicy.pdf" target="_blank" class="text-gray-400 hover:text-white transition-colors">
             <span class="lang-en">Privacy Policy</span>
             <span class="lang-sr hidden">Politika privatnosti</span>
           </a>
@@ -1486,8 +1542,8 @@ Satisfaction</span>
       const contactForm = document.getElementById('contact-form');
       const formMessage = document.getElementById('form-message');
       const submitBtn = document.getElementById('submit-btn');
-      
-      contactForm.addEventListener('submit', function(e) {
+
+      if (contactForm) contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Basic validation
@@ -1695,13 +1751,15 @@ Satisfaction</span>
         }, interval);
       }
 
-       // Mobile dropdown toggle
+      // Mobile dropdown toggle
       const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
       mobileDropdownToggles.forEach(toggle => {
-        toggle.addEventListener('click', function() {
-          const dropdownMenu = this.nextElementSibling;
-          dropdownMenu.classList.toggle('hidden');
-          
+        toggle.addEventListener('click', function(e) {
+          e.stopPropagation();
+          const dropdown = this.closest('.mobile-dropdown');
+          const dropdownMenu = dropdown ? dropdown.querySelector('.mobile-dropdown-menu') : null;
+          if (dropdownMenu) dropdownMenu.classList.toggle('hidden');
+
           // Toggle icon
           const icon = this.querySelector('i');
           if (icon) {
@@ -1877,9 +1935,10 @@ Satisfaction</span>
                   <p class="text-gray-600">${partner.description}</p>
                 </div>
               `).join('');
+              setLanguage(language);
             }
           });
-        
+
         // Load International Collaboration content
         fetchContent({ page: 'international_collaboration', lang: language })
           .then(data => {
@@ -1894,18 +1953,20 @@ Satisfaction</span>
                   </div>
                 </div>
               `).join('');
+              setLanguage(language);
             }
           });
-        
+
         // Load Data Protection content
         fetchContent({ page: 'data_protection', lang: language })
           .then(data => {
             const dataProtectionContent = document.getElementById('data-protection-content');
             if (dataProtectionContent) {
               dataProtectionContent.innerHTML = data.content;
+              setLanguage(language);
             }
           });
-        
+
         // Load Products content
         fetchContent({ page: 'products', lang: language })
           .then(data => {
@@ -1925,9 +1986,10 @@ Satisfaction</span>
                   </div>
                 </div>
               `).join('');
+              setLanguage(language);
             }
           });
-        
+
         // Load Projects content
         fetchContent({ page: 'projects', lang: language })
           .then(data => {
@@ -1947,6 +2009,7 @@ Satisfaction</span>
                   </div>
                 </div>
               `).join('');
+              setLanguage(language);
             }
           });
       }
