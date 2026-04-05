@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>International Collaboration | DevSolutions - Professional Software Development</title>
+  <title>International Collaboration | SYSQBIT </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -12,11 +12,12 @@
 </head>
 <body class="bg-gray-50">
   <!-- Navigation -->
-  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+  <nav id="main-nav" class="navbar fixed top-0 w-full bg-white bg-opacity-95 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center">
-        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
-      </a>
+        <span class="text-2xl font-bold text-black">
+  SYS<span class="text-red-600">Q</span>BIT
+</span>
       
       <div class="hidden md:flex items-center space-x-8">
         <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
@@ -38,6 +39,10 @@
               <span class="lang-en">Products</span>
               <span class="lang-sr hidden">Proizvodi</span>
             </a>
+              <a href="industries.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Industries</span>
+              <span class="lang-sr hidden">Industrije</span>
+            </a>
             <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
               <span class="lang-en">Projects</span>
               <span class="lang-sr hidden">Projekti</span>
@@ -52,9 +57,9 @@
           <span class="lang-en">Blog</span>
           <span class="lang-sr hidden">Blog</span>
         </a>
-        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Careers</span>
-          <span class="lang-sr hidden">Karijere</span>
+        <a href="different.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">How we are different</span>
+          <span class="lang-sr hidden">Po čemu smo drugačiji</span>
         </a>
         <div class="relative group">
           <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center active">
@@ -69,10 +74,7 @@
             </a>
           </div>
         </div>
-        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Data Protection</span>
-          <span class="lang-sr hidden">Zaštita podataka</span>
-        </a>
+        
         <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Contact</span>
           <span class="lang-sr hidden">Kontakt</span>
@@ -96,7 +98,14 @@
       </div>
     </div>
     
-    <!-- Mobile menu -->
+
+
+
+
+
+        <!-- Mobile menu backdrop -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-45 hidden"></div>
+        <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
       <div class="container mx-auto px-4 py-4">
         <div class="flex flex-col space-y-4">
@@ -125,32 +134,36 @@
                 <span class="lang-en">Projects</span>
                 <span class="lang-sr hidden">Projekti</span>
               </a>
+              <a href="portfolio.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Portfolio</span>
+                <span class="lang-sr hidden">Portfolio</span>
+              </a>
             </div>
           </div>
-          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Portfolio</span>
-            <span class="lang-sr hidden">Portfolio</span>
-          </a>
           <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Blog</span>
             <span class="lang-sr hidden">Blog</span>
           </a>
-          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Careers</span>
-            <span class="lang-sr hidden">Karijere</span>
+          <a href="different.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">How we are different</span>
+            <span class="lang-sr hidden">Po čemu smo drugačiji</span>
           </a>
-          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Partners</span>
-            <span class="lang-sr hidden">Partneri</span>
-          </a>
-          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">International</span>
-            <span class="lang-sr hidden">Međunarodna</span>
-          </a>
-          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Data Protection</span>
-            <span class="lang-sr hidden">Zaštita podataka</span>
-          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">International Partners</span>
+                <span class="lang-sr hidden">Međunarodni partneri</span>
+              </a>
+            </div>
+          </div>
+         
           <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Contact</span>
             <span class="lang-sr hidden">Kontakt</span>
@@ -309,12 +322,117 @@
       </div>
     </section>
 
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const language = localStorage.getItem('language') || 'en';
+
+  
+
+
+  const container = document.getElementById('international-content');
+  if (!container) return;
+
+  container.innerHTML = internationalData[language].map(item => `
+    <div class="bg-white rounded-xl overflow-hidden shadow-lg">
+      <img src="${item.image}" alt="${item.title}" class="w-full h-48 object-cover">
+      <div class="p-6">
+        <h3 class="text-xl font-bold mb-2">${item.title}</h3>
+        <p class="text-gray-600">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
+});
+</script>
+
+
+
+    <section id="international" class="py-20 md:py-32 bg-gray-50">
+  <div class="container mx-auto px-4">
+
+    <!-- Section title -->
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        <span class="lang-en">International Collaboration</span>
+        <span class="lang-sr hidden">Međunarodna saradnja</span>
+      </h2>
+
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        <span class="lang-en">
+          Building strong international connections to support innovation, growth, and global impact.
+        </span>
+        <span class="lang-sr hidden">
+          Gradimo snažne međunarodne veze u cilju inovacija, rasta i globalnog uticaja.
+        </span>
+      </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+      <!-- EEN -->
+      <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="lang-en">Enterprise Europe Network (EEN)</span>
+          <span class="lang-sr hidden">Enterprise Europe Network (EEN)</span>
+        </h3>
+
+        <p class="text-gray-600">
+          <span class="lang-en">
+            SYSQBIT is part of the Enterprise Europe Network (EEN), through which it actively participates in the development of international partnerships, technology transfer, and innovation projects at the European and global level.
+          </span>
+          <span class="lang-sr hidden">
+          SYSQBIT je deo saradničke mreže Enterprise Europe Network (EEN), kroz koju aktivno učestvuje u razvoju međunarodnih partnerstava, tehnoloških transfera i inovacionih projekata na evropskom i globalnom nivou.
+          </span>
+        </p>
+      </div>
+
+      <!-- WIPO -->
+      <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="lang-en">WIPO</span>
+          <span class="lang-sr hidden">WIPO</span>
+        </h3>
+
+        <p class="text-gray-600">
+          <span class="lang-en">
+            Cooperation related to intellectual property protection, innovation frameworks,
+            and global positioning of proprietary technologies.
+          </span>
+          <span class="lang-sr hidden">
+            Nakon potvrde našeg zaštitnog znaka i realizacije patenta, uz angažovanje posebnog tima advokata u Sjedinjenim Američkim Državama, kao i imenovanih predstavnika, ostvarili smo značajne rezultate i uspostavili relevantne saradnje sa institucijama iz SAD.
+          </span>
+        </p>
+      </div>
+
+      <!-- USA -->
+      <div class="bg-white rounded-2xl shadow-sm p-8 hover:shadow-md transition">
+        <h3 class="text-xl font-semibold mb-4">
+          <span class="lang-en">United States</span>
+          <span class="lang-sr hidden">Sjedinjene Američke Države</span>
+        </h3>
+
+        <p class="text-gray-600">
+          <span class="lang-en">
+           After the confirmation of our trademark and the realization of the patent, with the support of a dedicated team of attorneys in the United States and appointed representatives, we achieved significant results and established strong collaborations with U.S.-based institutions.
+          </span>
+          <span class="lang-sr hidden">
+        Nakon potvrde našeg zaštitnog znaka i realizacije patenta, uz angažovanje posebnog tima advokata u Sjedinjenim Američkim Državama, kao i imenovanih predstavnika, ostvarili smo značajne rezultate i uspostavili relevantne saradnje sa institucijama iz SAD.
+          </span>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
     <!-- Call to Action -->
     <section class="py-20 bg-blue-600">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
-          <span class="lang-en">Ready to Go Global?</span>
-          <span class="lang-sr hidden">Spremni da idete globalno?</span>
+          <span class="lang-en">Join Us</span>
+          <span class="lang-sr hidden">Pridružite nam se</span>
         </h2>
         <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
           <span class="lang-en">Let's discuss how we can help you expand your business internationally with our technology solutions.</span>
@@ -333,13 +451,70 @@
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
-          <a href="index.html" class="inline-block mb-6">
-            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          <a href="javascript:void(0)" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">SYSQBIT<span class="text-blue-400"></span></span>
           </a>
           <p class="text-gray-400 mb-6">
-            <span class="lang-en">Transforming businesses through innovative software solutions since 2023.</span>
-            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2023. godine.</span>
+            <span class="lang-en">Transforming businesses through innovative software solutions since 2022.</span>
+            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2022. godine.</span>
           </p>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/search/results/all/?keywords=sysqbit&origin=GLOBAL_SEARCH_HEADER&sid=4ds" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/sysqbit_company/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573702603239" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Explore</span>
+            <span class="lang-sr hidden">Istražite</span>
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Home</span>
+                <span class="lang-sr hidden">Početna</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">About Us</span>
+                <span class="lang-sr hidden">O nama</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Blog</span>
+                <span class="lang-sr hidden">Blog</span>
+              </a>
+            </li>
+<li>
+              <a href="different.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">How we are different</span>
+                <span class="lang-sr hidden">Po čemu smo drugačiji</span>
+              </a>
+            </li>
+<li>
+              <a href="partners.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </a>
+            </li>
+
+          </ul>
         </div>
         
         <div>
@@ -348,48 +523,79 @@
             <span class="lang-sr hidden">Usluge</span>
           </h3>
           <ul class="space-y-4">
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
+            <li>
+              <a href="products.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+            </li>
+            <li>
+              <a href="industries.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Industries</span>
+                <span class="lang-sr hidden">Industrije</span>
+              </a>
+            </li>
+<li>
+              <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </li>
+
+           
+       
           </ul>
         </div>
         
         <div>
           <h3 class="text-lg font-semibold mb-6">
-            <span class="lang-en">Company</span>
-            <span class="lang-sr hidden">Kompanija</span>
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontaktirajte nas</span>
           </h3>
-          <ul class="space-y-4">
-            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-6">
-            <span class="lang-en">Connect</span>
-            <span class="lang-sr hidden">Povežite se</span>
-          </h3>
-          <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-          </div>
+          <p class="text-gray-400 mb-4">
+            <span class="lang-en">Republic of Serbia, Sremska Mitrovica 22000, Filipa Visnjica 88</span>
+            <span class="lang-sr hidden">Republika Srbija, Sremska Mitrovica 22000, Filipa Višnjića 88</span>
+<br> 
+            <br>
+            
+            <span class="lang-en">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <span class="lang-sr hidden">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <br>
+            <br>
+            <span class="lang-en">16401 NW 37th Avenue, Miami Gardens, FL 33054 United States</span>
+            <span class="lang-sr hidden">16401 NW 37th Avenue, Miami Gardens, FL 33054 Amerika</span>
+            <br>
+
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Phone: +381 (0) 66 640 5630</span>
+            <span class="lang-sr hidden">Telefon: +381 (0) 66 640 5630 </span>
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Email: office@sysqbit.com</span>
+            <span class="lang-sr hidden">Email: office@sysqbit.com</span>
+          </p>
+         
         </div>
       </div>
       
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p class="text-gray-400">
-          <span class="lang-en">&copy; 2025 DevSolutions. All rights reserved.</span>
-          <span class="lang-sr hidden">&copy; 2025 DevSolutions. Sva prava zadržana.</span>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">
+          <span class="lang-en">&copy; 2025 SYSQBIT. All rights reserved.</span>
+          <span class="lang-sr hidden">&copy; 2025 SYSQBIT. Sva prava zadržana.</span>
         </p>
+        <div class="flex space-x-6">
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Privacy Policy</span>
+            <span class="lang-sr hidden">Politika privatnosti</span>
+          </a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Terms of Service</span>
+            <span class="lang-sr hidden">Uslovi korišćenja</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

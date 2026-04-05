@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio | DevSolutions - Professional Software Development</title>
+  <title>Portfolio | SYSQBIT </title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -12,11 +12,12 @@
 </head>
 <body class="bg-gray-50">
   <!-- Navigation -->
-  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+  <nav id="main-nav" class="navbar fixed top-0 w-full bg-white bg-opacity-95 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center">
-        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
-      </a>
+        <span class="text-2xl font-bold text-black">
+  SYS<span class="text-red-600">Q</span>BIT
+</span>
       
       <div class="hidden md:flex items-center space-x-8">
         <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
@@ -38,6 +39,10 @@
               <span class="lang-en">Products</span>
               <span class="lang-sr hidden">Proizvodi</span>
             </a>
+              <a href="industries.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Industries</span>
+              <span class="lang-sr hidden">Industrije</span>
+            </a>
             <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
               <span class="lang-en">Projects</span>
               <span class="lang-sr hidden">Projekti</span>
@@ -52,9 +57,9 @@
           <span class="lang-en">Blog</span>
           <span class="lang-sr hidden">Blog</span>
         </a>
-        <a href="careers.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Careers</span>
-          <span class="lang-sr hidden">Karijere</span>
+        <a href="different.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">How we are different</span>
+          <span class="lang-sr hidden">Po čemu smo</span>
         </a>
         <div class="relative group">
           <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
@@ -69,10 +74,7 @@
             </a>
           </div>
         </div>
-        <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
-          <span class="lang-en">Data Protection</span>
-          <span class="lang-sr hidden">Zaštita podataka</span>
-        </a>
+        
         <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
           <span class="lang-en">Contact</span>
           <span class="lang-sr hidden">Kontakt</span>
@@ -95,6 +97,9 @@
         </div>
       </div>
     </div>
+    
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-45 hidden"></div>
     
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
@@ -125,32 +130,36 @@
                 <span class="lang-en">Projects</span>
                 <span class="lang-sr hidden">Projekti</span>
               </a>
+              <a href="portfolio.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Portfolio</span>
+                <span class="lang-sr hidden">Portfolio</span>
+              </a>
             </div>
           </div>
-          <a href="portfolio.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Portfolio</span>
-            <span class="lang-sr hidden">Portfolio</span>
-          </a>
           <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Blog</span>
             <span class="lang-sr hidden">Blog</span>
           </a>
-          <a href="careers.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Careers</span>
-            <span class="lang-sr hidden">Karijere</span>
+          <a href="different.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">How we are different</span>
+            <span class="lang-sr hidden">Po čemu smo drugačiji</span>
           </a>
-          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Partners</span>
-            <span class="lang-sr hidden">Partneri</span>
-          </a>
-          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">International</span>
-            <span class="lang-sr hidden">Međunarodna</span>
-          </a>
-          <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Data Protection</span>
-            <span class="lang-sr hidden">Zaštita podataka</span>
-          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">International Partners</span>
+                <span class="lang-sr hidden">Međunarodni partneri</span>
+              </a>
+            </div>
+          </div>
+         
           <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Contact</span>
             <span class="lang-sr hidden">Kontakt</span>
@@ -194,17 +203,17 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 portfolio-grid">
           <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-category="web">
-            <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="E-Learning Platform" class="w-full h-64 object-cover">
+            <img src="assets/images/sanyview2.jpeg" alt="E-Learning Platform" class="w-full h-64 object-cover">
             <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
-              <h3 class="text-white text-2xl font-bold mb-2">E-Learning Platform</h3>
+              <h3 class="text-white text-2xl font-bold mb-2">SanyView</h3>
               <p class="text-blue-100 mb-4">Web Development, UI/UX</p>
-              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+              <a href="sanyview.html" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
                 View Project
               </a>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">E-Learning Platform</h3>
-              <p class="text-gray-600 mb-4">A comprehensive online learning management system with interactive courses and progress tracking.</p>
+              <h3 class="text-xl font-bold mb-2">SanyView</h3>
+              <p class="text-gray-600 mb-4">SanyView is a smart, digitalized tourism system that integrates a mobile application, a control dashboard, and hardware devices into a single unified solution.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">React</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Node.js</span>
@@ -214,17 +223,17 @@
           </div>
           
           <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="200" data-category="mobile">
-            <img src="https://cdn.pixabay.com/photo/2017/01/22/12/07/imac-1999636_1280.png" alt="Fitness Tracking App" class="w-full h-64 object-cover">
+            <img src="assets/images/Estirando las manos.jpg" alt="Fitness Tracking App" class="w-full h-64 object-cover">
             <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
-              <h3 class="text-white text-2xl font-bold mb-2">Fitness Tracking App</h3>
+              <h3 class="text-white text-2xl font-bold mb-2">Face Recognition</h3>
               <p class="text-blue-100 mb-4">Mobile Development, UI/UX</p>
-              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+              <a href="facerecognition.html" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
                 View Project
               </a>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Fitness Tracking App</h3>
-              <p class="text-gray-600 mb-4">Cross-platform mobile app for fitness enthusiasts with workout tracking and social features.</p>
+              <h3 class="text-xl font-bold mb-2">Face Recognition</h3>
+              <p class="text-gray-600 mb-4">By combining advanced machine learning with real-time processing, it transforms facial data into actionable insights.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">React Native</span>
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Firebase</span>
@@ -234,16 +243,36 @@
           </div>
           
           <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="300" data-category="enterprise">
-            <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg" alt="Enterprise Resource Planning" class="w-full h-64 object-cover">
+            <img src="assets/images/Laptop Programando.jpg" alt="Enterprise Resource Planning" class="w-full h-64 object-cover">
             <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
-              <h3 class="text-white text-2xl font-bold mb-2">Enterprise Resource Planning</h3>
+              <h3 class="text-white text-2xl font-bold mb-2">Construction software</h3>
               <p class="text-blue-100 mb-4">Enterprise Solutions, Integration</p>
               <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
                 View Project
               </a>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Enterprise Resource Planning</h3>
+              <h3 class="text-xl font-bold mb-2">Construction software</h3>
+              <p class="text-gray-600 mb-4">Comprehensive ERP system for manufacturing company with inventory and supply chain management.</p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">.NET</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">SQL Server</span>
+                <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Azure</span>
+              </div>
+            </div>
+          </div>
+
+             <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="300" data-category="enterprise">
+            <img src="assets/images/Laptop Programando.jpg" alt="Enterprise Resource Planning" class="w-full h-64 object-cover">
+            <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
+              <h3 class="text-white text-2xl font-bold mb-2">Cybersecurity</h3>
+              <p class="text-blue-100 mb-4">Enterprise Solutions, Integration</p>
+              <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
+                View Project
+              </a>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold mb-2">Cybersecurity</h3>
               <p class="text-gray-600 mb-4">Comprehensive ERP system for manufacturing company with inventory and supply chain management.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">.NET</span>
@@ -256,14 +285,14 @@
           <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="400" data-category="ecommerce">
             <img src="https://cdn.pixabay.com/photo/2018/01/29/13/03/internet-3116062_1280.jpg" alt="Luxury Retail Platform" class="w-full h-64 object-cover">
             <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
-              <h3 class="text-white text-2xl font-bold mb-2">Luxury Retail Platform</h3>
+              <h3 class="text-white text-2xl font-bold mb-2">SmartFoot Medical System </h3>
               <p class="text-blue-100 mb-4">E-commerce, Web Development</p>
               <a href="javascript:void(0)" class="px-6 py-2 bg-white text-blue-600 font-medium rounded-lg hover:bg-blue-50">
                 View Project
               </a>
             </div>
             <div class="p-6">
-              <h3 class="text-xl font-bold mb-2">Luxury Retail Platform</h3>
+              <h3 class="text-xl font-bold mb-2">SmartFoot Medical System </h3>
               <p class="text-gray-600 mb-4">High-end e-commerce platform with advanced product customization and premium user experience.</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">Vue.js</span>
@@ -273,7 +302,7 @@
             </div>
           </div>
           
-          <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="500" data-category="web">
+         <!--     <div class="portfolio-item rounded-xl overflow-hidden shadow-lg bg-white" data-aos="fade-up" data-aos-delay="500" data-category="web">
             <img src="https://cdn.pixabay.com/photo/2018/05/18/15/30/webdesign-3411373_1280.jpg" alt="Healthcare Dashboard" class="w-full h-64 object-cover">
             <div class="portfolio-overlay flex flex-col justify-center items-center text-center px-6">
               <h3 class="text-white text-2xl font-bold mb-2">Healthcare Dashboard</h3>
@@ -311,7 +340,7 @@
                 <span class="px-3 py-1 bg-blue-100 text-blue-600 text-sm rounded-full">PayPal</span>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
@@ -361,55 +390,156 @@
     </section>
   </main>
   
-  <!-- Footer -->
+ <!-- Footer -->
   <footer class="bg-gray-900 text-white py-16">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         <div>
-          <a href="index.html" class="inline-block mb-6">
-            <span class="text-2xl font-bold text-white">Dev<span class="text-blue-400">Solutions</span></span>
+          <a href="javascript:void(0)" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">SYSQBIT<span class="text-blue-400"></span></span>
           </a>
           <p class="text-gray-400 mb-6">
-            Transforming businesses through innovative software solutions since 2023.
+            <span class="lang-en">Transforming businesses through innovative software solutions since 2022.</span>
+            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2022. godine.</span>
           </p>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-6">Services</h3>
-          <ul class="space-y-4">
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Custom Software</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Mobile Apps</a></li>
-            <li><a href="services.html" class="text-gray-400 hover:text-white transition-colors">Web Development</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-6">Company</h3>
-          <ul class="space-y-4">
-            <li><a href="about.html" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
-            <li><a href="careers.html" class="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
-          </ul>
-        </div>
-        
-        <div>
-          <h3 class="text-lg font-semibold mb-6">Connect</h3>
           <div class="flex space-x-4">
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/search/results/all/?keywords=sysqbit&origin=GLOBAL_SEARCH_HEADER&sid=4ds" target="_blank" class="text-gray-400 hover:text-white transition-colors">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
-              <i class="fab fa-twitter"></i>
+            <a href="https://www.instagram.com/sysqbit_company/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram"></i>
             </a>
-            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+            <a href="https://www.facebook.com/profile.php?id=61573702603239" target="_blank" class="text-gray-400 hover:text-white transition-colors">
               <i class="fab fa-facebook-f"></i>
             </a>
           </div>
         </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Explore</span>
+            <span class="lang-sr hidden">Istražite</span>
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Home</span>
+                <span class="lang-sr hidden">Početna</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">About Us</span>
+                <span class="lang-sr hidden">O nama</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Blog</span>
+                <span class="lang-sr hidden">Blog</span>
+              </a>
+            </li>
+<li>
+              <a href="different.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">How we are different</span>
+                <span class="lang-sr hidden">Po čemu smo drugačiji</span>
+              </a>
+            </li>
+<li>
+              <a href="partners.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="products.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+            </li>
+            <li>
+              <a href="industries.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Industries</span>
+                <span class="lang-sr hidden">Industrije</span>
+              </a>
+            </li>
+<li>
+              <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </li>
+
+           
+       
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontaktirajte nas</span>
+          </h3>
+          <p class="text-gray-400 mb-4">
+            <span class="lang-en">Republic of Serbia, Sremska Mitrovica 22000, Filipa Visnjica 88</span>
+            <span class="lang-sr hidden">Republika Srbija, Sremska Mitrovica 22000, Filipa Višnjića 88</span>
+
+            <br> 
+            <br>
+            
+            <span class="lang-en">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <span class="lang-sr hidden">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <br>
+            <br>
+            <span class="lang-en">16401 NW 37th Avenue, Miami Gardens, FL 33054 United States</span>
+            <span class="lang-sr hidden">16401 NW 37th Avenue, Miami Gardens, FL 33054 Amerika</span>
+            <br>
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Phone: +381 (0) 66 640 5630</span>
+            <span class="lang-sr hidden">Telefon: +381 (0) 66 640 5630 </span>
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Email: office@sysqbit.com</span>
+            <span class="lang-sr hidden">Email: office@sysqbit.com</span>
+          </p>
+         
+        </div>
       </div>
       
-      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-        <p class="text-gray-400">&copy; 2025 DevSolutions. All rights reserved.</p>
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">
+          <span class="lang-en">&copy; 2025 SYSQBIT. All rights reserved.</span>
+          <span class="lang-sr hidden">&copy; 2025 SYSQBIT. Sva prava zadržana.</span>
+        </p>
+        <div class="flex space-x-6">
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Privacy Policy</span>
+            <span class="lang-sr hidden">Politika privatnosti</span>
+          </a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Terms of Service</span>
+            <span class="lang-sr hidden">Uslovi korišćenja</span>
+          </a>
+        </div>
       </div>
     </div>
   </footer>

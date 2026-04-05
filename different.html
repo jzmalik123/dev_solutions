@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How we are different | SYSQBIT </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav id="main-nav" class="navbar fixed top-0 w-full bg-white bg-opacity-95 shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center">
+       <span class="text-2xl font-bold text-black">
+  SYS<span class="text-red-600">Q</span>BIT
+</span>
+      
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Home</span>
+          <span class="lang-sr hidden">Početna</span>
+        </a>
+        <a href="about.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">About Us</span>
+          <span class="lang-sr hidden">O nama</span>
+        </a>
+        <div class="relative group">
+          <a href="services.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
+            <a href="products.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Products</span>
+              <span class="lang-sr hidden">Proizvodi</span>
+            </a>
+            <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Projects</span>
+              <span class="lang-sr hidden">Projekti</span>
+            </a>
+            <a href="portfolio.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Portfolio</span>
+              <span class="lang-sr hidden">Portfolio</span>
+            </a>
+          </div>
+        </div>
+        <a href="blog.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Blog</span>
+          <span class="lang-sr hidden">Blog</span>
+        </a>
+        <a href="different.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link active">
+          <span class="lang-en">How we are different</span>
+          <span class="lang-sr hidden">Po čemu smo drugačiji</span>
+        </a>
+        <div class="relative group">
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
+            <a href="international.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">International Partners</span>
+              <span class="lang-sr hidden">Međunarodni partneri</span>
+            </a>
+          </div>
+        </div>
+     
+        <a href="contact.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link">
+          <span class="lang-en">Contact</span>
+          <span class="lang-sr hidden">Kontakt</span>
+        </a>
+      </div>
+      
+      <div class="flex items-center">
+        <div class="language-toggle mr-6 md:mr-0">
+          <span id="lang-en" class="cursor-pointer font-medium text-blue-600">EN</span>
+          <span class="mx-1 text-gray-400">/</span>
+          <span id="lang-sr" class="cursor-pointer font-medium text-gray-400">SR</span>
+        </div>
+        
+        <div class="md:hidden ml-4">
+          <button id="menu-toggle" class="hamburger text-gray-800">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-45 hidden"></div>
+    
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col space-y-4">
+          <a href="index.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Home</span>
+            <span class="lang-sr hidden">Početna</span>
+          </a>
+          <a href="about.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">About Us</span>
+            <span class="lang-sr hidden">O nama</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="products.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+              <a href="projects.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+              <a href="portfolio.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">Portfolio</span>
+                <span class="lang-sr hidden">Portfolio</span>
+              </a>
+            </div>
+          </div>
+          <a href="blog.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Blog</span>
+            <span class="lang-sr hidden">Blog</span>
+          </a>
+          <a href="different.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">How we are different</span>
+            <span class="lang-sr hidden">Po čemu smo drugačiji</span>
+          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">International Partners</span>
+                <span class="lang-sr hidden">Međunarodni partneri</span>
+              </a>
+            </div>
+          </div>
+         
+          <a href="contact.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontakt</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container mx-auto px-4">
+        <nav class="breadcrumb mb-8">
+          <ol class="flex items-center space-x-2 text-blue-100">
+            <li class="breadcrumb-item">
+              <a href="index.html" class="hover:text-white">Home</a>
+            </li>
+            <li class="breadcrumb-item active">How we are different</li>
+          </ol>
+        </nav>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">SYSQBIT HOLDING</h1>
+        <p class="text-xl text-blue-100 max-w-3xl">
+         After one of our digitalization projects was recognized as one of the top business ideas and received support from the Ministry of Economy of the Republic of Serbia, SYSQBIT – Core Solutions was established, expanding Sysqbit Holding to two companies.
+        </p>
+      </div>
+    </section>
+
+
+     <!-- About Us Section -->
+    <section id="about" class="py-20 md:py-32 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 mb-10 md:mb-0 md:pr-10" data-aos="fade-right">
+        <img src="assets/images/holding.jpeg" alt="Our Team" class="rounded-xl shadow-lg"> 
+          </div>
+          <div class="w-full md:w-1/2" data-aos="fade-left">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6 text-gray-900 section-heading">
+              <span class="lang-en">Innovating with Government Support</span>
+              <span class="lang-sr hidden">Inovacije uz podršku države</span>
+            </h2>
+            <p class="text-lg text-gray-700 mb-6">
+              <span class="lang-en"> Our teams at SYSQBIT build solutions with a clear goal: to make technology work for you. We believe in deeply understanding your ideas, challenges, and long-term vision, because only then do systems of real value emerge. Through close collaboration, precise communication, and a strategic approach, we develop advanced software solutions tailored to the real needs of the market. We focus on quality, reliability, and innovation, not by chance, but as a result of clearly defined values and exceptional engineering.</span>
+              <span class="lang-sr hidden">Naši timovi u SYSQBIT-u grade rešenja sa jasnim ciljem: da tehnologija radi u vašu korist. Verujemo u duboko razumevanje vaših ideja, izazova i dugoročne vizije, jer samo tako nastaju sistemi koji imaju stvarnu vrednost. Kroz blisku saradnju, preciznu komunikaciju i strateški pristup, razvijamo napredna softverska rešenja prilagođena stvarnim potrebama tržišta. Fokusirani smo na kvalitet, pouzdanost i inovaciju, ne kao slučajnost, već kao rezultat jasno definisanih vrednosti i izuzetnog inženjeringa.</span>
+            </p>
+            <p class="text-lg text-gray-700 mb-6">
+              <span class="lang-en"></span>
+              <span class="lang-sr hidden"></span>
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    <span class="lang-en">Supported by the Ministry of Economy of the Republic of Serbia</span>
+                    <span class="lang-sr hidden">Podrška Ministarstva privrede Republike Srbije</span>
+                  </h4>
+                  <p class="text-gray-600">
+                    <span class="lang-en"></span>
+                    <span class="lang-sr hidden"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    <span class="lang-en">Supported by the Serbian Chamber of Commerce</span>
+                    <span class="lang-sr hidden">Podrška Privredne komore Republike Srbije</span>
+                  </h4>
+                  <p class="text-gray-600">
+                    <span class="lang-en"></span>
+                    <span class="lang-sr hidden"></span>
+                  </p>
+                </div>
+              </div>
+         <!--      <div class="flex items-start">
+                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    <span class="lang-en"></span>
+                    <span class="lang-sr hidden"></span>
+                  </h4>
+                  <p class="text-gray-600">
+                    <span class="lang-en"></span>
+                    <span class="lang-sr hidden"></span>
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-gray-900 mb-1">
+                    <span class="lang-en">Global Reach</span>
+                    <span class="lang-sr hidden">Globalni doseg</span>
+                  </h4>
+                  <p class="text-gray-600">
+                    <span class="lang-en">Clients across 20+ countries</span>
+                    <span class="lang-sr hidden">Klijenti u preko 20 zemalja</span>
+                  </p>
+                </div> -->
+              </div>
+            </div>
+           
+          </div>
+        </div>
+
+        <!-- Button za SYSQBIT Holding -->
+<div class="mt-6 grid grid-cols-2">
+  <div></div> <!-- prazna kolona da pomeri button desno -->
+  <div class="flex justify-start">
+    <a href="https://www.sysqbitholding.com" target="_blank" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 ml-40">
+      Visit SYSQBIT Holding
+    </a>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+    <!-- Why Work With Us -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            Why Work With Us?
+          </h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-rocket text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Innovation First</h4>
+            <p class="text-gray-600">Work with cutting-edge technologies and contribute to innovative projects that make a real impact.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-users text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Great Team</h4>
+            <p class="text-gray-600">Join a collaborative team of professionals with certifications such as Microsoft, Odoo Developers, and other credentials, who support each other’s growth and knowledge sharing.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-chart-line text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Career Growth</h4>
+            <p class="text-gray-600">Continuous learning opportunities and clear career progression paths for all team members.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-home text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Flexible Work Options</h4>
+            <p class="text-gray-600">Flexible working arrangements, open to both office and remote work.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="500">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-gift text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Great Benefits</h4>
+            <p class="text-gray-600">Competitive salary with additional percentages from successfully completed EU projects, paid internships, and other comprehensive benefits.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <i class="fas fa-globe text-2xl text-blue-600"></i>
+            </div>
+            <h4 class="text-xl font-semibold mb-2">Global Impact</h4>
+            <p class="text-gray-600">Work on projects that serve clients worldwide and make a difference in various industries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Open Positions -->
+    <section class="content-section bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+          Proven excellence in innovation
+          </h2>
+         
+        </div>
+        
+        <div class="space-y-6 max-w-4xl mx-auto">
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">One of our projects in the Republic of Serbia was recognized among the best business ideas of the year.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  
+                </div>
+               
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+               
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>This recognition highlights SYSQBIT’s ability to identify market needs, develop innovative solutions, and deliver projects that create measurable value. The success of this project reflects our commitment to quality, strategic thinking, and long-term impact, setting the standard for future initiatives.</li>
+                  
+                </ul>
+              
+              </div>
+            </div>
+          </div>
+
+
+           <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">The founder of SYSQBIT, Željana Vulović, is the author of several scientific papers in artificial intelligence, which are used at prestigious universities such as Stanford and Harvard.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+               
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900"></h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>Her work in artificial intelligence spans machine learning, deep learning, and advanced AI architectures, with applications ranging from predictive analytics to intelligent automation. Several of her research papers are integrated into curricula at top universities, including Stanford and Harvard, and have informed state-of-the-art AI solutions in industry, demonstrating both academic and practical impact.</li>
+                 
+                </ul>
+              
+              </div>
+            </div>
+          </div>
+          
+ <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">The SYSQBIT team has collaborated with government institutions, international partners, and industry leaders, demonstrating the ability to deliver complex, high-profile projects.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+               
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900"></h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>The SYSQBIT team has undergone specialized training from a recognized development agency and has extensive experience working with government institutions, international organizations, and leading industry partners. This equips us to successfully deliver complex, high-impact projects, combining technical excellence with strategic execution.</li>
+                  
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Our innovative concepts and projects are protected by intellectual property, including WIPO registration, ensuring a high standard of originality and security.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+              
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900"></h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>Several of our projects are protected by intellectual property rights, including WIPO registrations, national patents, and copyrighted works in the Republic of Serbia. Additionally, some of our products are trademarked in the United States, ensuring a high standard of originality, security, and international recognition.</li>
+                
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+
+
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Our product in Montenegro was selected among the top 7 national innovations.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                </div>
+               
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900"></h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>Our product in Montenegro was selected among the top 7 national innovations at the Demo Day organized by DigitalDen in the Science and Technology Park, highlighting its innovative design and technological impact.</li>
+                 
+                </ul>
+               
+              </div>
+            </div>
+          </div>
+          
+          <div class="career-item bg-white rounded-lg p-6 md:p-8 shadow-lg" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex flex-col md:flex-row justify-between md:items-center">
+              <div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Participation in international competitions and innovation programs, receiving recognitions that confirm the global potential of our solutions.</h3>
+                <div class="flex flex-wrap gap-2 mb-4">
+                  
+                </div>
+               
+              </div>
+              <button class="job-details-btn px-6 py-2 border-2 border-blue-600 text-blue-600 font-medium rounded-lg hover:bg-blue-600 hover:text-white transition-colors md:mt-0 mt-4">
+                View Details
+              </button>
+            </div>
+            <div class="job-details hidden mt-6">
+              <div class="border-t pt-6">
+                <h4 class="font-bold mb-3 text-gray-900"></h4>
+                <ul class="list-disc pl-5 text-gray-600 mb-4 space-y-1">
+                  <li>4+ years of experience in DevOps or SRE roles</li>
+                 
+                </ul>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+        
+     
+      </div>
+    </section>
+
+    <!-- Application Process -->
+    <section class="content-section bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6 inline-block section-heading">
+            Pioneering Projects
+          </h2>
+       
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">1</div>
+            <h4 class="text-xl font-semibold mb-2"></h4>
+            <p class="text-gray-600">One of our projects represents a copyrighted work of the Republic of Serbia over its source code.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">2</div>
+            <h4 class="text-xl font-semibold mb-2"></h4>
+            <p class="text-gray-600">We developed the first software in Serbia specifically designed for the construction sector.</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">3</div>
+            <h4 class="text-xl font-semibold mb-2"></h4>
+            <p class="text-gray-600">Our work is recognized by the World Intellectual Property Organization (WIPO).</p>
+          </div>
+          
+          <div class="text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">4</div>
+            <h4 class="text-xl font-semibold mb-2"></h4>
+            <p class="text-gray-600">By utilizing artificial intelligence and deep neural networks, we created software for facial recognition.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+ <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-16">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div>
+          <a href="javascript:void(0)" class="inline-block mb-6">
+            <span class="text-2xl font-bold text-white">SYSQBIT<span class="text-blue-400"></span></span>
+          </a>
+          <p class="text-gray-400 mb-6">
+            <span class="lang-en">Transforming businesses through innovative software solutions since 2022.</span>
+            <span class="lang-sr hidden">Transformišemo poslovanje kroz inovativna softverska rešenja od 2022. godine.</span>
+          </p>
+          <div class="flex space-x-4">
+            <a href="https://www.linkedin.com/search/results/all/?keywords=sysqbit&origin=GLOBAL_SEARCH_HEADER&sid=4ds" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.instagram.com/sysqbit_company/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61573702603239" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Explore</span>
+            <span class="lang-sr hidden">Istražite</span>
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="index.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Home</span>
+                <span class="lang-sr hidden">Početna</span>
+              </a>
+            </li>
+            <li>
+              <a href="about.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">About Us</span>
+                <span class="lang-sr hidden">O nama</span>
+              </a>
+            </li>
+            <li>
+              <a href="services.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Services</span>
+                <span class="lang-sr hidden">Usluge</span>
+              </a>
+            </li>
+            <li>
+              <a href="blog.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Blog</span>
+                <span class="lang-sr hidden">Blog</span>
+              </a>
+            </li>
+<li>
+              <a href="different.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">How we are different</span>
+                <span class="lang-sr hidden">Po čemu smo drugačiji</span>
+              </a>
+            </li>
+<li>
+              <a href="partners.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Services</span>
+            <span class="lang-sr hidden">Usluge</span>
+          </h3>
+          <ul class="space-y-4">
+            <li>
+              <a href="products.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Products</span>
+                <span class="lang-sr hidden">Proizvodi</span>
+              </a>
+            </li>
+            <li>
+              <a href="industries.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Industries</span>
+                <span class="lang-sr hidden">Industrije</span>
+              </a>
+            </li>
+<li>
+              <a href="projects.html" class="text-gray-400 hover:text-white transition-colors">
+                <span class="lang-en">Projects</span>
+                <span class="lang-sr hidden">Projekti</span>
+              </a>
+            </li>
+
+           
+       
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-6">
+            <span class="lang-en">Contact</span>
+            <span class="lang-sr hidden">Kontaktirajte nas</span>
+          </h3>
+          <p class="text-gray-400 mb-4">
+            <span class="lang-en">Republic of Serbia, Sremska Mitrovica 22000, Filipa Visnjica 88</span>
+            <span class="lang-sr hidden">Republika Srbija, Sremska Mitrovica 22000, Filipa Višnjića 88</span>
+<br> 
+            <br>
+            
+            <span class="lang-en">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <span class="lang-sr hidden">Complejo C8, Block 2, Office 004, Calle Luis A. de Herrera, esquina Av. Liber Seregni, Uruguay
+</span>
+            <br>
+            <br>
+            <span class="lang-en">16401 NW 37th Avenue, Miami Gardens, FL 33054 United States</span>
+            <span class="lang-sr hidden">16401 NW 37th Avenue, Miami Gardens, FL 33054 Amerika</span>
+            <br>
+
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Phone: +381 (0) 66 640 5630</span>
+            <span class="lang-sr hidden">Telefon: +381 (0) 66 640 5630 </span>
+          </p>
+           <p class="text-gray-400 mb-4">
+            <span class="lang-en">Email: office@sysqbit.com</span>
+            <span class="lang-sr hidden">Email: office@sysqbit.com</span>
+          </p>
+         
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-400 mb-4 md:mb-0">
+          <span class="lang-en">&copy; 2025 SYSQBIT. All rights reserved.</span>
+          <span class="lang-sr hidden">&copy; 2025 SYSQBIT. Sva prava zadržana.</span>
+        </p>
+        <div class="flex space-x-6">
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Privacy Policy</span>
+            <span class="lang-sr hidden">Politika privatnosti</span>
+          </a>
+          <a href="javascript:void(0)" class="text-gray-400 hover:text-white transition-colors">
+            <span class="lang-en">Terms of Service</span>
+            <span class="lang-sr hidden">Uslovi korišćenja</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Consent Banner -->
+  <div id="cookie-consent" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 shadow-lg z-50 hidden">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between">
+        <div class="mb-4 md:mb-0 md:mr-6">
+          <p class="text-sm">
+            <span class="lang-en">We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept Cookies", you consent to our use of cookies.</span>
+            <span class="lang-sr hidden">Koristimo kolačiće za poboljšanje vašeg iskustva pregledanja i analizu našeg saobraćaja. Klikom na "Prihvati kolačiće" pristajete na naše korišćenje kolačića.</span>
+          </p>
+        </div>
+        <button id="accept-cookies" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors text-sm font-medium">
+          <span class="lang-en">Accept Cookies</span>
+          <span class="lang-sr hidden">Prihvati kolačiće</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

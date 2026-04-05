@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{PAGE_TITLE}} | DevSolutions - Professional Software Development</title>
+  <title>{{PAGE_TITLE}} | SYSQBIT</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -12,13 +12,16 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body class="bg-gray-50">
+
   <!-- Navigation -->
-  <nav id="main-nav" class="navbar fixed top-0 w-full z-50 bg-white bg-opacity-95 shadow-sm">
+  <nav id="main-nav" class="navbar fixed top-0 w-full bg-white bg-opacity-95 shadow-sm">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
       <a href="index.html" class="flex items-center">
-        <span class="text-2xl font-bold text-blue-600">Dev<span class="text-gray-800">Solutions</span></span>
+        <span class="text-2xl font-bold text-black">
+          SYS<span class="text-red-600">Q</span>BIT
+        </span>
       </a>
-      
+
       <div class="hidden md:flex items-center space-x-8">
         <a href="index.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link {{HOME_ACTIVE}}">
           <span class="lang-en">Home</span>
@@ -39,6 +42,10 @@
               <span class="lang-en">Products</span>
               <span class="lang-sr hidden">Proizvodi</span>
             </a>
+            <a href="industries.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">Industries</span>
+              <span class="lang-sr hidden">Industrije</span>
+            </a>
             <a href="projects.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
               <span class="lang-en">Projects</span>
               <span class="lang-sr hidden">Projekti</span>
@@ -57,14 +64,20 @@
           <span class="lang-en">Careers</span>
           <span class="lang-sr hidden">Karijere</span>
         </a>
-        <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link {{PARTNERS_ACTIVE}}">
-          <span class="lang-en">Partners</span>
-          <span class="lang-sr hidden">Partneri</span>
-        </a>
-        <a href="international.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link {{INTERNATIONAL_ACTIVE}}">
-          <span class="lang-en">International</span>
-          <span class="lang-sr hidden">Međunarodna</span>
-        </a>
+        <div class="relative group">
+          <a href="partners.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link flex items-center {{PARTNERS_ACTIVE}}">
+            <span class="lang-en">Partners</span>
+            <span class="lang-sr hidden">Partneri</span>
+            <i class="fas fa-chevron-down ml-1 text-xs"></i>
+          </a>
+          <div class="absolute left-0 mt-1 w-48 bg-white shadow-lg rounded-md overflow-hidden z-20 dropdown-menu hidden">
+            <a href="international.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-600 hover:text-white">
+              <span class="lang-en">International Partners</span>
+              <span class="lang-sr hidden">Međunarodni partneri</span>
+            </a>
+          </div>
+        </div>
+
         <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 transition-colors nav-link {{DATA_PROTECTION_ACTIVE}}">
           <span class="lang-en">Data Protection</span>
           <span class="lang-sr hidden">Zaštita podataka</span>
@@ -91,6 +104,9 @@
         </div>
       </div>
     </div>
+    
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-menu-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
     
     <!-- Mobile menu -->
     <div id="mobile-menu" class="md:hidden bg-white w-full hidden animate__animated animate__fadeIn">
@@ -135,14 +151,22 @@
             <span class="lang-en">Careers</span>
             <span class="lang-sr hidden">Karijere</span>
           </a>
-          <a href="partners.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">Partners</span>
-            <span class="lang-sr hidden">Partneri</span>
-          </a>
-          <a href="international.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
-            <span class="lang-en">International Collaboration</span>
-            <span class="lang-sr hidden">Međunarodna saradnja</span>
-          </a>
+          <div class="mobile-dropdown">
+            <div class="flex items-center justify-between text-gray-800 hover:text-blue-600 py-2 mobile-dropdown-toggle cursor-pointer">
+              <div>
+                <span class="lang-en">Partners</span>
+                <span class="lang-sr hidden">Partneri</span>
+              </div>
+              <i class="fas fa-chevron-down text-xs"></i>
+            </div>
+            <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2">
+              <a href="international.html" class="block text-gray-800 hover:text-blue-600 py-2 mobile-nav-link">
+                <span class="lang-en">International Partners</span>
+                <span class="lang-sr hidden">Međunarodni partneri</span>
+              </a>
+            </div>
+          </div>
+
           <a href="data-protection.html" class="text-gray-800 hover:text-blue-600 py-2 transition-colors mobile-nav-link">
             <span class="lang-en">Data Protection</span>
             <span class="lang-sr hidden">Zaštita podataka</span>
@@ -155,3 +179,6 @@
       </div>
     </div>
   </nav>
+
+
+
