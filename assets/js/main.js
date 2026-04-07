@@ -219,6 +219,26 @@ document.addEventListener("DOMContentLoaded", function () {
     document
       .querySelectorAll(".lang-sr")
       .forEach((el) => el.classList.toggle("hidden", lang !== "sr"));
+
+    // Update toggle button styling
+    if (langEn) {
+      if (lang === "en") {
+        langEn.classList.add("text-blue-600");
+        langEn.classList.remove("text-gray-400");
+      } else {
+        langEn.classList.add("text-gray-400");
+        langEn.classList.remove("text-blue-600");
+      }
+    }
+    if (langSr) {
+      if (lang === "sr") {
+        langSr.classList.add("text-blue-600");
+        langSr.classList.remove("text-gray-400");
+      } else {
+        langSr.classList.add("text-gray-400");
+        langSr.classList.remove("text-blue-600");
+      }
+    }
   }
 
   setLanguage(localStorage.getItem("language") || "en");
